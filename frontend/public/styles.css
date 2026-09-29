@@ -14,7 +14,7 @@
 html { scroll-behavior: smooth; }
 body { overflow-x: hidden; }
 
-section[id] { scroll-margin-top: 92px; }
+section[id] { scroll-margin-top: 112px; }
 
 ::selection { background: var(--gold); color: var(--ink); }
 

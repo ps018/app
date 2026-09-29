@@ -71,3 +71,9 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 - Name format "Dr Richa Sinha" (no period) applied site-wide incl. script.js toast and EMAILJS-SETUP.md
 - About: added portrait slider card (doc-slider) with a placeholder slide for the doctor's photo; arrows/dots/swipe auto-enable when more slides are added (HTML comment shows how)
 - Verified desktop + mobile: logo loads uncropped, eyebrow correct, no "Dr." format remains, slider controls hidden with a single slide, no overflow, no console errors
+
+
+## Revision v7 (2026-09-29, user-requested)
+- Header logo enlarged: logo.png auto-trimmed of transparent margins (566x627 art) and displayed at 64px (mobile) / 80px (desktop) with a subtle drop shadow; section scroll offsets adjusted for the taller header
+- Phone field placeholder changed to 9999999999
+- Verified desktop + mobile: logo loads at full size, no overflow, anchor jumps clear the taller header, no console errors

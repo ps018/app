@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr. Richa Sinha, MDS — Periodontist & Implantologist | Thane, Mumbai, Navi Mumbai</title>
+  <title>Dr Richa Sinha, MDS — Periodontist & Implantologist | Thane, Mumbai, Navi Mumbai</title>
   <meta name="description" content="Periodontist & Implantologist specializing in dental implants, laser therapy, micro-surgery, root coverage procedures and periodontal care. Practicing across Thane, Mumbai & Navi Mumbai." />
   <link rel="icon" type="image/png" href="logo-mark.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Dr. Richa Sinha, MDS — Periodontics & Implantology" />
+  <meta property="og:title" content="Dr Richa Sinha, MDS — Periodontics & Implantology" />
   <meta property="og:description" content="Precision periodontal care & permanent dental implant restoration across Thane, Mumbai & Navi Mumbai." />
   <meta property="og:type" content="website" />
 
@@ -52,7 +52,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Dr. Richa Sinha, MDS",
+    "name": "Dr Richa Sinha, MDS",
     "jobTitle": "Periodontist & Implantologist",
     "areaServed": ["Thane", "Mumbai", "Navi Mumbai"],
     "email": "drricha.gumcare@gmail.com",
@@ -69,12 +69,8 @@
   <!-- ============ NAVIGATION ============ -->
   <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 transition-all duration-300" data-testid="site-header">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-      <a href="#home" class="group flex items-center gap-3" data-testid="nav-logo" aria-label="Dr. Richa Sinha — home">
-        <img src="logo-mark.png" alt="Dr. Richa Sinha — Periodontics & Implantology" class="h-11 w-11 rounded-2xl object-contain transition-transform duration-300 group-hover:-rotate-6" data-testid="nav-logo-img" />
-        <span class="leading-tight">
-          <span class="block font-head text-[15px] font-semibold tracking-tight text-ink">Dr. Richa Sinha</span>
-          <span class="block text-[10.5px] font-semibold uppercase tracking-[0.22em] text-teal">Periodontics & Implantology</span>
-        </span>
+      <a href="#home" class="group flex items-center" data-testid="nav-logo" aria-label="Dr Richa Sinha — home">
+        <img src="logo.png" alt="Dr Richa Sinha — Gums · Implants · Aesthetics" class="h-12 w-12 rounded-2xl object-contain transition-transform duration-300 group-hover:-rotate-3 sm:h-14 sm:w-14" data-testid="nav-logo-img" />
       </a>
 
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
@@ -129,7 +125,7 @@
         <div class="max-w-3xl">
           <p class="hero-fade inline-flex items-center gap-2.5 rounded-full border border-teal-100 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal backdrop-blur" data-testid="hero-eyebrow" style="--d:.05s">
             <span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
-            Periodontist & Implantologist
+            Dr Richa Sinha · Periodontist & Implantologist
           </p>
 
           <h1 class="mt-7 font-display text-[2.6rem] font-semibold leading-[1.06] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[4rem]" data-testid="hero-headline">
@@ -182,12 +178,40 @@
 
     <!-- ============ ABOUT ============ -->
     <section id="about" class="section-pad" data-testid="about-section">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8">
-        <div class="reveal max-w-3xl">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+        <!-- Portrait slider — add more photos of Dr Richa Sinha later (copy the slide block below) -->
+        <div class="reveal mx-auto w-full max-w-md lg:max-w-none" data-testid="about-photo-slider">
+          <div class="doc-slider" role="region" aria-roledescription="carousel" aria-label="Photos of Dr Richa Sinha">
+            <div class="doc-slider-track" id="docSliderTrack">
+              <!-- TO ADD MORE PHOTOS: copy this whole <figure> block and replace the placeholder with
+                   <img src="your-photo.jpg" alt="Dr Richa Sinha" /> (put the file next to index.html) -->
+              <figure class="doc-slide" data-testid="about-slide-1">
+                <!-- TODO: replace this placeholder with a real portrait of Dr Richa Sinha -->
+                <div class="doc-placeholder">
+                  <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="60" cy="42" r="20"/>
+                    <path d="M24 100c7-24 20-32 36-32s29 8 36 32"/>
+                  </svg>
+                  <p class="doc-placeholder-name">Dr Richa Sinha</p>
+                  <p class="doc-placeholder-note">Portrait coming soon</p>
+                </div>
+              </figure>
+            </div>
+            <button type="button" class="doc-nav doc-prev" data-testid="slider-prev" aria-label="Previous photo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button type="button" class="doc-nav doc-next" data-testid="slider-next" aria-label="Next photo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+            <div class="doc-dots" id="docDots" aria-label="Choose photo"></div>
+          </div>
+        </div>
+
+        <div class="reveal">
           <p class="section-eyebrow" data-testid="about-eyebrow">Practice Overview</p>
           <h2 class="section-title" data-testid="about-title">A patient-first philosophy, rooted in surgical precision.</h2>
           <p class="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="about-bio">
-            Dr. Richa Sinha specializes in the diagnosis, prevention and surgical treatment of periodontal
+            Dr Richa Sinha specializes in the diagnosis, prevention and surgical treatment of periodontal
             disease, alongside state-of-the-art dental implant placement. Her approach combines micro-surgical
             precision with unhurried, compassionate care — every treatment plan is explained in plain language,
             priced transparently and paced around your comfort.
@@ -201,7 +225,7 @@
 
           <blockquote class="mt-9 border-l-2 border-gold pl-6" data-testid="about-quote">
             <p class="font-display text-2xl italic leading-snug text-ink">"Healthy gums are the foundation of every confident smile — we build on nothing less."</p>
-            <footer class="mt-3 font-head text-sm font-medium text-teal">— Dr. Richa Sinha</footer>
+            <footer class="mt-3 font-head text-sm font-medium text-teal">— Dr Richa Sinha</footer>
           </blockquote>
         </div>
       </div>
@@ -508,7 +532,7 @@
       <div class="mx-auto max-w-3xl px-5 sm:px-8">
         <div class="reveal text-center">
           <h2 class="section-title" data-testid="inquiry-title">Send an Inquiry.</h2>
-          <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="inquiry-sub">Fill in your details below and Dr. Richa Sinha will get back to you directly.</p>
+          <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="inquiry-sub">Fill in your details below and Dr Richa Sinha will get back to you directly.</p>
         </div>
 
         <div class="reveal mt-12" style="--d:.12s">
@@ -569,7 +593,7 @@
           <div id="formSuccess" class="form-success hidden" data-testid="form-success">
             <span class="success-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L10 17l-5-5"/></svg></span>
             <h3 class="font-head text-2xl font-semibold text-ink" data-testid="form-success-title">Inquiry sent.</h3>
-            <p class="mt-3 text-sm leading-relaxed text-slate-500" data-testid="form-success-copy">Thank you — your inquiry has been sent successfully. Dr. Richa Sinha will get back to you shortly at the contact details you shared.</p>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500" data-testid="form-success-copy">Thank you — your inquiry has been sent successfully. Dr Richa Sinha will get back to you shortly at the contact details you shared.</p>
             <p id="demoNote" class="mt-3 hidden rounded-xl bg-gold-pale px-4 py-3 text-xs leading-relaxed text-ink/80" data-testid="form-demo-note">Demo mode: connect your EmailJS keys in <code>script.js</code> (see <code>EMAILJS-SETUP.md</code>) to deliver inquiries to the doctor's inbox.</p>
             <button id="resetFormBtn" class="mt-6 inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 font-head text-sm font-medium text-ink transition-all duration-300 hover:border-gold hover:text-teal" data-testid="btn-send-another">Send another inquiry</button>
           </div>
@@ -587,7 +611,7 @@
       <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div class="reveal">
           <p class="section-eyebrow !text-gold" data-testid="contact-eyebrow">Contact Us</p>
-          <h2 class="section-title !text-white" data-testid="contact-title">Get in touch with Dr. Richa Sinha.</h2>
+          <h2 class="section-title !text-white" data-testid="contact-title">Get in touch with Dr Richa Sinha.</h2>
         </div>
 
         <div class="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -633,8 +657,8 @@
       <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <a href="#home" class="flex items-center gap-3" data-testid="footer-logo">
-            <img src="logo-mark.png" alt="Dr. Richa Sinha logo" class="h-12 w-12 rounded-2xl bg-white/5 object-contain p-1" data-testid="footer-logo-img" />
-            <span class="leading-tight"><span class="block font-head text-[15px] font-semibold text-white">Dr. Richa Sinha</span><span class="block text-[10.5px] font-semibold uppercase tracking-[0.22em] text-gold">Periodontics & Implantology</span></span>
+            <img src="logo-mark.png" alt="Dr Richa Sinha logo" class="h-12 w-12 rounded-2xl bg-white/5 object-contain p-1" data-testid="footer-logo-img" />
+            <span class="leading-tight"><span class="block font-head text-[15px] font-semibold text-white">Dr Richa Sinha</span><span class="block text-[10.5px] font-semibold uppercase tracking-[0.22em] text-gold">Periodontics & Implantology</span></span>
           </a>
           <p class="mt-5 max-w-sm text-sm leading-relaxed" data-testid="footer-blurb">Precision periodontal care and permanent implant restoration — delivered with calm, evidence-based dentistry across Thane, Mumbai & Navi Mumbai.</p>
         </div>
@@ -642,7 +666,7 @@
           <p class="footer-head">Quick Links</p>
           <ul class="mt-5 space-y-3 text-sm">
             <li><a href="#home" class="footer-link" data-testid="footer-link-home">Home</a></li>
-            <li><a href="#about" class="footer-link" data-testid="footer-link-about">About Dr. Sinha</a></li>
+            <li><a href="#about" class="footer-link" data-testid="footer-link-about">About Dr Richa Sinha</a></li>
             <li><a href="#specializations" class="footer-link" data-testid="footer-link-specializations">Specializations</a></li>
             <li><a href="#cases" class="footer-link" data-testid="footer-link-cases">Case Studies</a></li>
             <li><a href="#inquiry" class="footer-link" data-testid="footer-link-inquiry">Send an Inquiry</a></li>
@@ -663,7 +687,7 @@
       </p>
 
       <div class="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-7 text-xs sm:flex-row">
-        <p data-testid="footer-copyright">© <span id="year">2026</span> Dr. Richa Sinha, MDS. All rights reserved.</p>
+        <p data-testid="footer-copyright">© <span id="year">2026</span> Dr Richa Sinha, MDS. All rights reserved.</p>
         <p class="text-teal-100/40" data-testid="footer-credit">Periodontics · Implantology · Thane — Mumbai — Navi Mumbai</p>
       </div>
     </div>
@@ -688,7 +712,7 @@
       <h3 id="disclaimerTitle" class="font-head text-2xl font-semibold text-ink">Medical Disclaimer</h3>
       <div class="modal-body">
         <p>Information provided on this website is for educational purposes only and does not constitute formal medical or dental advice, diagnosis or a treatment plan.</p>
-        <p>Outcomes described in case studies vary by patient. An in-person consultation with Dr. Richa Sinha is required for accurate diagnostic evaluation and customized treatment planning.</p>
+        <p>Outcomes described in case studies vary by patient. An in-person consultation with Dr Richa Sinha is required for accurate diagnostic evaluation and customized treatment planning.</p>
         <p>In case of a dental emergency, call directly at <strong>+91 9980901103</strong> rather than using the online form.</p>
       </div>
     </div>
@@ -700,7 +724,7 @@
   <!-- Floating WhatsApp chat -->
   <a href="https://wa.me/919980901103?text=Hello%20Dr.%20Richa%20Sinha%2C%20I%27d%20like%20to%20inquire%20about%20a%20consultation."
      class="wa-float" target="_blank" rel="noopener noreferrer"
-     aria-label="Chat with Dr. Richa Sinha on WhatsApp" data-testid="whatsapp-float">
+     aria-label="Chat with Dr Richa Sinha on WhatsApp" data-testid="whatsapp-float">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="wa-label">Chat on WhatsApp</span>
   </a>

@@ -395,6 +395,45 @@ section[id] { scroll-margin-top: 92px; }
   .wa-label { display: none; }
 }
 
+/* ---------- About portrait slider ---------- */
+.doc-slider {
+  position: relative; overflow: hidden; border-radius: 2rem;
+  border: 1px solid #E2E8F0; background: #fff;
+  box-shadow: 0 24px 48px -12px rgba(15, 44, 89, 0.18);
+}
+.doc-slider-track { display: flex; transition: transform .55s var(--ease-out); }
+.doc-slide { position: relative; flex: 0 0 100%; aspect-ratio: 4 / 5; margin: 0; }
+.doc-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.doc-placeholder {
+  height: 100%; display: grid; place-content: center; gap: 10px; text-align: center;
+  background: linear-gradient(160deg, #F0FDFA 0%, #F8FAF9 45%, #F7EFDD 100%);
+  color: rgba(15, 44, 89, 0.45);
+}
+.doc-placeholder svg { width: 92px; height: 92px; margin: 0 auto; stroke-width: 1.6; opacity: .8; }
+.doc-placeholder-name { font-family: "Cormorant Garamond", serif; font-size: 1.6rem; font-weight: 600; color: var(--ink); }
+.doc-placeholder-note {
+  font-family: Outfit, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--teal);
+}
+.doc-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  display: none; place-items: center; width: 44px; height: 44px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92); color: var(--ink);
+  box-shadow: 0 8px 20px -6px rgba(15, 44, 89, 0.25); backdrop-filter: blur(8px);
+  transition: background-color .25s var(--ease-out), color .25s var(--ease-out);
+}
+.doc-slider.has-multiple .doc-nav { display: grid; }
+.doc-nav:hover { background: var(--ink); color: #fff; }
+.doc-prev { left: 14px; }
+.doc-next { right: 14px; }
+.doc-dots { position: absolute; bottom: 14px; left: 0; right: 0; display: none; justify-content: center; gap: 8px; }
+.doc-slider.has-multiple .doc-dots { display: flex; }
+.doc-dot {
+  width: 8px; height: 8px; border-radius: 999px; border: none; padding: 0; cursor: pointer;
+  background: rgba(15, 44, 89, 0.25); transition: all .25s var(--ease-out);
+}
+.doc-dot.is-active { background: var(--gold); width: 22px; }
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }

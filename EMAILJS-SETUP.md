@@ -59,7 +59,7 @@ Sends a confirmation email to the visitor after every successful inquiry.
 2. Open `template_3ulgtnn` and set:
    - **To Email:** `{{email}}`  ← the visitor's own address
    - **Subject:** e.g. `We've received your inquiry`
-   - **Body:** thank `{{full_name}}` and confirm Dr. Richa Sinha will reply
+   - **Body:** thank `{{full_name}}` and confirm Dr Richa Sinha will reply
      shortly. Keep the variable names (`full_name`, `phone`, `email`,
      `service`, `message`).
 

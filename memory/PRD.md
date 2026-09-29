@@ -64,3 +64,10 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 ## Revision v5 (2026-09-29, bugfix)
 - Fixed duplicate auto-reply: visitor got the reply twice because BOTH the EmailJS dashboard built-in auto-reply (on template_mehiq6z) and a code-side emailjs.send to template_3ulgtnn fired per inquiry. Removed the code-side send; dashboard auto-reply is now the single mechanism. Added a submitting-flag idempotency guard (Enter-spam/double-submit safe). Also fixed leftover placeholder phone/clinic wording in form error strings.
 - Verified via network interception: one submission with Enter-spam mid-flight => exactly 1 EmailJS API request (inquiry), 0 code-side auto-reply calls, success state shown.
+
+
+## Revision v6 (2026-09-29, user-requested)
+- Nav: full logo lockup (logo.png) only, name text removed; hero eyebrow now reads "Dr Richa Sinha · Periodontist & Implantologist"
+- Name format "Dr Richa Sinha" (no period) applied site-wide incl. script.js toast and EMAILJS-SETUP.md
+- About: added portrait slider card (doc-slider) with a placeholder slide for the doctor's photo; arrows/dots/swipe auto-enable when more slides are added (HTML comment shows how)
+- Verified desktop + mobile: logo loads uncropped, eyebrow correct, no "Dr." format remains, slider controls hidden with a single slide, no overflow, no console errors

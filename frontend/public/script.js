@@ -1,5 +1,5 @@
 /* ============================================================
-   Dr. Richa Sinha — Periodontics & Implantology
+   Dr Richa Sinha — Periodontics & Implantology
    Vanilla JS: smooth scroll, nav, before/after slider,
    form validation + EmailJS submission handler.
    ============================================================ */
@@ -390,7 +390,7 @@ async function sendWithBackend(formData) {
           // the "Send inquiry" template (template_mehiq6z) has its built-in
           // Auto-Reply enabled, pointing at template_3ulgtnn. Do NOT call
           // emailjs.send with that template here, or visitors get it twice.
-          showToast("Inquiry sent — Dr. Sinha will get back to you shortly.", "success");
+          showToast("Inquiry sent — Dr Richa Sinha will get back to you shortly.", "success");
         } else {
           // --- DEMO MODE (no keys yet): simulate + surface the fallback path ---
           console.info("[EmailJS] Demo mode — add PUBLIC_KEY / SERVICE_ID / TEMPLATE_ID in script.js to enable live email delivery.");
@@ -443,6 +443,45 @@ async function sendWithBackend(formData) {
   $$("[data-modal-close]").forEach((b) => b.addEventListener("click", closeModals));
   $$(".modal-overlay").forEach((m) => m.addEventListener("click", (e) => { if (e.target === m) closeModals(); }));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModals(); });
+
+  /* ---------------- About portrait slider ---------------- */
+  const docTrack = $("#docSliderTrack");
+  if (docTrack) {
+    const slider = docTrack.closest(".doc-slider");
+    const slides = $$(".doc-slide", docTrack);
+    const prevBtn = $(".doc-prev", slider);
+    const nextBtn = $(".doc-next", slider);
+    const dotsWrap = $("#docDots");
+    let cur = 0;
+    const go = (i) => {
+      cur = (i + slides.length) % slides.length;
+      docTrack.style.transform = `translateX(-${cur * 100}%)`;
+      slides.forEach((sl, si) => sl.setAttribute("aria-hidden", String(si !== cur)));
+      $$(".doc-dot", dotsWrap).forEach((d, di) => d.classList.toggle("is-active", di === cur));
+    };
+    if (slides.length > 1) {
+      slider.classList.add("has-multiple");
+      slides.forEach((_, i) => {
+        const d = document.createElement("button");
+        d.type = "button";
+        d.className = "doc-dot" + (i === 0 ? " is-active" : "");
+        d.setAttribute("aria-label", `Photo ${i + 1}`);
+        d.setAttribute("data-testid", `slider-dot-${i + 1}`);
+        d.addEventListener("click", () => go(i));
+        dotsWrap.appendChild(d);
+      });
+      prevBtn.addEventListener("click", () => go(cur - 1));
+      nextBtn.addEventListener("click", () => go(cur + 1));
+      let x0 = null;
+      slider.addEventListener("pointerdown", (e) => { x0 = e.clientX; });
+      slider.addEventListener("pointerup", (e) => {
+        if (x0 === null) return;
+        const dx = e.clientX - x0;
+        if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1));
+        x0 = null;
+      });
+    }
+  }
 
   /* ---------------- Footer year ---------------- */
   const yearEl = $("#year");

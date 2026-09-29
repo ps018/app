@@ -77,3 +77,8 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 - Header logo enlarged: logo.png auto-trimmed of transparent margins (566x627 art) and displayed at 64px (mobile) / 80px (desktop) with a subtle drop shadow; section scroll offsets adjusted for the taller header
 - Phone field placeholder changed to 9999999999
 - Verified desktop + mobile: logo loads at full size, no overflow, anchor jumps clear the taller header, no console errors
+
+
+## Revision v8 (2026-09-29, user-requested)
+- Hero badge restructured: "Dr Richa Sinha" (15px bold) on line one, "Periodontist & Implantologist" (10.5px) on line two
+- Verified desktop + mobile: correct two-line hierarchy, no overflow

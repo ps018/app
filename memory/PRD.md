@@ -3,8 +3,8 @@
 ## Original Problem Statement
 Build a clean, professional, modern, fully responsive single-page website for a dentist specializing in Periodontics and Implantology. Tech: HTML + Tailwind CSS + vanilla JS + EmailJS; static hosting (Vercel/Netlify) ready; working email submission system with EmailJS config boilerplate. Sections: sticky nav, high-converting hero with trust badges, about/credentials, specialized services (Dental Implants / Periodontal Care / Preventive Maintenance & Oral Surgery), interactive before/after drag comparison slider with clinical notes, validated inquiry & appointment form (date/time as range) with EmailJS boilerplate, contact & location (Mon–Sun, Thane/Mumbai/Navi Mumbai), footer with disclaimer + privacy. Deliverables: index.html, script.js, EmailJS setup guide, domain/hosting guide.
 
-## User Choices (from ask_human)
-- Identity: editable placeholder "Dr. Aditi Deshmukh, MDS — Periodontics & Implantology"
+## User Choices (from ask_human + follow-up revision 2026-09-29)
+- Identity: "Dr. Richa Sinha, MDS — Periodontist & Implantologist" (client-supplied R|S logo; NO clinic association — the site is a bio for the doctor)
 - Contacts: styled placeholders (+91 98XXX XXXXX / hello@drname.com)
 - Accent: soft gold (#C5A059) on clinical teal/blue
 - Imagery: real professional stock photos for hero/about
@@ -43,3 +43,11 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 ## Notes
 - No database, no auth — nothing to seed. Preview data note n/a (static files ship with code).
 - Dev server caches public/index.html template: restart frontend after editing it.
+
+## Revision v2 (2026-09-29, user-requested)
+- Logo replaced with client asset (RS Dental Logo v3.png → logo.png full + logo-mark.png transparent emblem crop, also used as favicon)
+- Removed: Book Consultation nav/drawer CTAs, hero portrait image + floating cards, about image + badges, "board-certified" everywhere, date/time form fields, osseointegration & clinics stats
+- Renamed: identity → Dr. Richa Sinha; hero CTA + form section → "Send an Inquiry" (#inquiry); form message now mandatory
+- Credentials (real, user-supplied): MDS Periodontology & Implantology (Davangere, Karnataka), BDS (Dharwad, Karnataka), Training Program in Basic & Advanced Implantology (Davangere, Karnataka)
+- Stats: 6+ months experience, 25+ dental implants; marquee: +Root-coverage Procedure, +Dental Implants, −Board Certified Periodontist, −Full-Arch Implantology
+- Contact section rebuilt (was reported invisible): operating days Mon–Sun, areas Thane/Mumbai/Navi Mumbai, quick links, call/email-directly buttons; footer disclaimer + © 2026 Dr. Richa Sinha, MDS

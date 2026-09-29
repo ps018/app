@@ -26,19 +26,16 @@ into `script.js`. Takes ~10 minutes.
 2. Set:
    - **To Email:** the doctor's professional address (fixed here — never from user input)
    - **Reply-To:** `{{email}}`  ← so "Reply" in the inbox reaches the patient directly
-   - **Subject:** `New appointment request — {{full_name}}`
+   - **Subject:** `New inquiry — {{full_name}}`
 3. Paste this body (or design your own — keep the variable names):
 
 ```text
-New consultation request from the website:
+New inquiry from the website:
 
 Name:     {{full_name}}
 Phone:    {{phone}}
 Email:    {{email}}
 Service:  {{service}}
-
-Preferred date: {{date_from}} → {{date_to}}
-Preferred time: {{time_from}} → {{time_to}}
 
 Message:
 {{message}}
@@ -47,8 +44,8 @@ Message:
 4. **Save** and copy the **Template ID** (looks like `template_xxxxxxx`).
 
 > The variable names above match the form's field `name` attributes exactly
-> (`full_name`, `phone`, `email`, `service`, `date_from`, `date_to`,
-> `time_from`, `time_to`, `message`). If you rename anything, rename it in
+> (`full_name`, `phone`, `email`, `service`, 
+> `message`). If you rename anything, rename it in
 > **both** the template and the form.
 
 ## Step 4 — Get the `PUBLIC_KEY`

@@ -24,8 +24,7 @@ const EMAILJS_CONFIG = {
 };
 
 // Template variables expected by the EmailJS template ({{...}}):
-//   full_name, phone, email, service, date_from, date_to,
-//   time_from, time_to, message
+//   full_name, phone, email, service, message
 // Set the template's "Reply-To" to {{email}} so replies reach the patient.
 
 const emailJsConfigured = () =>
@@ -309,20 +308,10 @@ async function sendWithBackend(formData) {
       test: (v) => v !== "",
       msg: "Please choose a service.",
     },
-    dateFrom: {
-      test: (v) => v !== "" && new Date(v) >= new Date(new Date().toDateString()),
-      msg: "Pick a date from today onwards.",
+    message: {
+      test: (v) => v.trim().length >= 5,
+      msg: "Please describe your inquiry (a few words).",
     },
-    dateTo: {
-      test: (v, form) => v === "" || new Date(v) >= new Date(form.dateFrom.value || v),
-      msg: "“To” date can't be before the “From” date.",
-    },
-    timeFrom: { test: (v) => v === "", msg: "" },           // optional
-    timeTo: {
-      test: (v, form) => v === "" || form.timeFrom.value === "" || form.timeTo.selectedIndex >= form.timeFrom.selectedIndex,
-      msg: "“To” time must be after the “From” time.",
-    },
-    message: { test: () => true, msg: "" },                 // optional
   };
 
   function setError(id, msg) {
@@ -357,15 +346,9 @@ async function sendWithBackend(formData) {
     });
   });
 
-  // min = today on date inputs
-  ["dateFrom", "dateTo"].forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.min = new Date().toISOString().split("T")[0];
-  });
-
   function setSending(state) {
     submitBtn.disabled = state;
-    submitLabel.textContent = state ? "Sending…" : "Submit Consultation Request";
+    submitLabel.textContent = state ? "Sending…" : "Submit Inquiry";
     submitSpinner.classList.toggle("hidden", !state);
   }
 
@@ -413,7 +396,7 @@ async function sendWithBackend(formData) {
         form.reset();
       } catch (err) {
         console.error("[EmailJS] submission failed:", err);
-        formStatus.innerHTML = '<span class="text-[#C74B3D]">We couldn\'t send your request. Please try again, or call +91 98XXX XXXXX.</span>';
+        formStatus.innerHTML = '<span class="text-[#C74B3D]">We couldn\'t send your inquiry. Please try again, or call +91 98XXX XXXXX.</span>';
         showToast("Sending failed — please retry or call the clinic.", "error");
       } finally {
         setSending(false);

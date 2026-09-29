@@ -4,7 +4,6 @@
    form validation + EmailJS submission handler.
    ============================================================ */
 
-/* global Lenis, emailjs */
 
 /* ============================================================
    1. EMAILJS CONFIGURATION  —  LIVE
@@ -74,8 +73,8 @@ async function sendWithBackend(formData) {
   /* ---------------- Smooth scrolling (Lenis) ---------------- */
   let lenis = null;
   function initSmoothScroll() {
-    if (prefersReducedMotion || typeof Lenis === "undefined") return;
-    lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    if (prefersReducedMotion || typeof window.Lenis === "undefined") return;
+    lenis = new window.Lenis({ duration: 1.15, smoothWheel: true });
     const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
   }
@@ -380,13 +379,13 @@ async function sendWithBackend(formData) {
       try {
         if (emailJsConfigured()) {
           // --- LIVE SEND via EmailJS (field "name" attributes map to template variables) ---
-          await emailjs.sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, form, {
+          await window.emailjs.sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, form, {
             publicKey: EMAILJS_CONFIG.PUBLIC_KEY,
             limitRate: { id: "appointment-form", throttle: 10000 },
           });
           // Best-effort auto-reply to the visitor (never blocks the inquiry)
           try {
-            await emailjs.send(
+            await window.emailjs.send(
               EMAILJS_CONFIG.SERVICE_ID,
               EMAILJS_CONFIG.AUTOREPLY_TEMPLATE_ID,
               {

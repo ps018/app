@@ -57,3 +57,6 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 - Real contact details: phone +91 9980901103, email drricha.gumcare@gmail.com (site-wide)
 - EmailJS LIVE: service_54gl2uu, inquiry template template_mehiq6z (→ doctor's inbox), auto-reply template template_3ulgtnn (→ visitor, best-effort after each inquiry), public key integrated in script.js
 - Verified end-to-end: real submission accepted by EmailJS API; success state shown; auto-reply attempted without errors. Inbox delivery must be confirmed by checking drricha.gumcare@gmail.com (and spam folder)
+
+## Revision v4 (2026-09-29, user-requested)
+- Floating WhatsApp chat button (wa.me/919980901103, prefilled greeting, expanding pill on hover, hidden label on mobile, sits below toasts/modals)

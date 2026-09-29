@@ -48,6 +48,16 @@ Message:
 > `message`). If you rename anything, rename it in
 > **both** the template and the form.
 
+## Auto-reply template (`template_3ulgtnn`)
+
+Sends a confirmation email to the visitor after every successful inquiry.
+In the EmailJS dashboard, open this template and set:
+- **To Email:** `{{email}}`  ← the visitor's own address
+- **Subject:** e.g. `We've received your inquiry`
+- **Body:** thank `{{full_name}}` for reaching out and confirm that
+  Dr. Richa Sinha will reply shortly. Keep the same variable names
+  (`full_name`, `phone`, `email`, `service`, `message`).
+
 ## Step 4 — Get the `PUBLIC_KEY`
 
 1. Open **Account** (left sidebar) → **Keys**.
@@ -60,9 +70,10 @@ Open **`script.js`** and edit the config block at the very top:
 
 ```js
 const EMAILJS_CONFIG = {
-  PUBLIC_KEY: "YOUR_PUBLIC_KEY",   // <-- STEP 1: paste your Public Key here
-  SERVICE_ID: "YOUR_SERVICE_ID",   // <-- STEP 2: paste your Service ID here
-  TEMPLATE_ID: "YOUR_TEMPLATE_ID", // <-- STEP 3: paste your Template ID here
+  PUBLIC_KEY: "PLXf-2xvGiN-R78no",
+  SERVICE_ID: "service_54gl2uu",
+  TEMPLATE_ID: "template_mehiq6z",           // "Send inquiry" → doctor's inbox
+  AUTOREPLY_TEMPLATE_ID: "template_3ulgtnn", // auto-reply → visitor's inbox
 };
 ```
 

@@ -51,3 +51,9 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 - Credentials (real, user-supplied): MDS Periodontology & Implantology (Davangere, Karnataka), BDS (Dharwad, Karnataka), Training Program in Basic & Advanced Implantology (Davangere, Karnataka)
 - Stats: 6+ months experience, 25+ dental implants; marquee: +Root-coverage Procedure, +Dental Implants, −Board Certified Periodontist, −Full-Arch Implantology
 - Contact section rebuilt (was reported invisible): operating days Mon–Sun, areas Thane/Mumbai/Navi Mumbai, quick links, call/email-directly buttons; footer disclaimer + © 2026 Dr. Richa Sinha, MDS
+
+
+## Revision v3 (2026-09-29, user-requested)
+- Real contact details: phone +91 9980901103, email drricha.gumcare@gmail.com (site-wide)
+- EmailJS LIVE: service_54gl2uu, inquiry template template_mehiq6z (→ doctor's inbox), auto-reply template template_3ulgtnn (→ visitor, best-effort after each inquiry), public key integrated in script.js
+- Verified end-to-end: real submission accepted by EmailJS API; success state shown; auto-reply attempted without errors. Inbox delivery must be confirmed by checking drricha.gumcare@gmail.com (and spam folder)

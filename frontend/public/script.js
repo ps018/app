@@ -1,31 +1,31 @@
 /* ============================================================
-   Dr. Aditi Deshmukh — Periodontics & Implantology
+   Dr. Richa Sinha — Periodontics & Implantology
    Vanilla JS: smooth scroll, nav, before/after slider,
    form validation + EmailJS submission handler.
    ============================================================ */
 
+/* global Lenis, emailjs */
+
 /* ============================================================
-   1. EMAILJS CONFIGURATION  —  ★ EDIT THESE 3 VALUES ★
+   1. EMAILJS CONFIGURATION  —  LIVE
    ------------------------------------------------------------
-   Follow the step-by-step guide in EMAILJS-SETUP.md, then:
-
-   STEP 1  →  PUBLIC_KEY   : EmailJS Dashboard → Account → Keys
-   STEP 2  →  SERVICE_ID   : EmailJS Dashboard → Email Services
-   STEP 3  →  TEMPLATE_ID  : EmailJS Dashboard → Email Templates
-
-   Until real values are pasted below, the form runs in DEMO
-   MODE: it validates everything and shows the success state,
-   but no email is sent.
+   LIVE — integrated (see EMAILJS-SETUP.md if keys ever change).
+   SERVICE_ID   : EmailJS Dashboard → Email Services
+   TEMPLATE_ID  : "Send inquiry" template → doctor's inbox
+   AUTOREPLY_ID : auto-reply template → visitor's inbox
+   PUBLIC_KEY   : EmailJS Dashboard → Account → Keys
    ============================================================ */
 const EMAILJS_CONFIG = {
-  PUBLIC_KEY: "YOUR_PUBLIC_KEY",   // <-- STEP 1: paste your Public Key here
-  SERVICE_ID: "YOUR_SERVICE_ID",   // <-- STEP 2: paste your Service ID here
-  TEMPLATE_ID: "YOUR_TEMPLATE_ID", // <-- STEP 3: paste your Template ID here
+  PUBLIC_KEY: "PLXf-2xvGiN-R78no",
+  SERVICE_ID: "service_54gl2uu",
+  TEMPLATE_ID: "template_mehiq6z",           // "Send inquiry" → doctor's inbox
+  AUTOREPLY_TEMPLATE_ID: "template_3ulgtnn", // auto-reply → visitor's inbox
 };
 
-// Template variables expected by the EmailJS template ({{...}}):
+// Template variables expected by both templates ({{...}}):
 //   full_name, phone, email, service, message
-// Set the template's "Reply-To" to {{email}} so replies reach the patient.
+// "Send inquiry" template: To Email = doctor's address, Reply-To = {{email}}
+// Auto-reply template:     To Email = {{email}} (the visitor's address)
 
 const emailJsConfigured = () =>
   Object.values(EMAILJS_CONFIG).every((v) => v && !v.startsWith("YOUR_"));
@@ -384,7 +384,24 @@ async function sendWithBackend(formData) {
             publicKey: EMAILJS_CONFIG.PUBLIC_KEY,
             limitRate: { id: "appointment-form", throttle: 10000 },
           });
-          showToast("Request sent — we'll call you back shortly.", "success");
+          // Best-effort auto-reply to the visitor (never blocks the inquiry)
+          try {
+            await emailjs.send(
+              EMAILJS_CONFIG.SERVICE_ID,
+              EMAILJS_CONFIG.AUTOREPLY_TEMPLATE_ID,
+              {
+                full_name: form.full_name.value,
+                phone: form.phone.value,
+                email: form.email.value,
+                service: form.service.value,
+                message: form.message.value,
+              },
+              { publicKey: EMAILJS_CONFIG.PUBLIC_KEY }
+            );
+          } catch (replyErr) {
+            console.warn("[EmailJS] auto-reply failed:", replyErr);
+          }
+          showToast("Inquiry sent — Dr. Sinha will get back to you shortly.", "success");
         } else {
           // --- DEMO MODE (no keys yet): simulate + surface the fallback path ---
           console.info("[EmailJS] Demo mode — add PUBLIC_KEY / SERVICE_ID / TEMPLATE_ID in script.js to enable live email delivery.");

@@ -51,12 +51,20 @@ Message:
 ## Auto-reply template (`template_3ulgtnn`)
 
 Sends a confirmation email to the visitor after every successful inquiry.
-In the EmailJS dashboard, open this template and set:
-- **To Email:** `{{email}}`  ← the visitor's own address
-- **Subject:** e.g. `We've received your inquiry`
-- **Body:** thank `{{full_name}}` for reaching out and confirm that
-  Dr. Richa Sinha will reply shortly. Keep the same variable names
-  (`full_name`, `phone`, `email`, `service`, `message`).
+
+1. Open the **"Send inquiry" template** (`template_mehiq6z`) in the dashboard
+   → turn its built-in **Auto-Reply ON** and select `template_3ulgtnn` as the
+   reply template. This is the ONLY mechanism that sends the reply —
+   the website code deliberately does not send it.
+2. Open `template_3ulgtnn` and set:
+   - **To Email:** `{{email}}`  ← the visitor's own address
+   - **Subject:** e.g. `We've received your inquiry`
+   - **Body:** thank `{{full_name}}` and confirm Dr. Richa Sinha will reply
+     shortly. Keep the variable names (`full_name`, `phone`, `email`,
+     `service`, `message`).
+
+> ⚠️ **If visitors receive the reply twice**, an extra code-side send has been
+> added somewhere — the dashboard auto-reply alone must send it.
 
 ## Step 4 — Get the `PUBLIC_KEY`
 

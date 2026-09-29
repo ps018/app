@@ -18,7 +18,7 @@ const EMAILJS_CONFIG = {
   PUBLIC_KEY: "PLXf-2xvGiN-R78no",
   SERVICE_ID: "service_54gl2uu",
   TEMPLATE_ID: "template_mehiq6z",           // "Send inquiry" → doctor's inbox
-  AUTOREPLY_TEMPLATE_ID: "template_3ulgtnn", // auto-reply → visitor's inbox
+  AUTOREPLY_TEMPLATE_ID: "template_3ulgtnn", // auto-reply → visitor (sent by EmailJS dashboard auto-reply on the inquiry template — never from code, or replies go out twice)
 };
 
 // Template variables expected by both templates ({{...}}):
@@ -359,8 +359,10 @@ async function sendWithBackend(formData) {
   }
 
   if (form) {
+    let submitting = false;
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      if (submitting) return; // hard guard: blocks double-submit (Enter spam, queued events)
 
       // Honeypot: silently drop bot submissions
       if (form.company_website && form.company_website.value.trim() !== "") return;
@@ -374,6 +376,7 @@ async function sendWithBackend(formData) {
         return;
       }
 
+      submitting = true;
       setSending(true);
 
       try {
@@ -383,23 +386,10 @@ async function sendWithBackend(formData) {
             publicKey: EMAILJS_CONFIG.PUBLIC_KEY,
             limitRate: { id: "appointment-form", throttle: 10000 },
           });
-          // Best-effort auto-reply to the visitor (never blocks the inquiry)
-          try {
-            await window.emailjs.send(
-              EMAILJS_CONFIG.SERVICE_ID,
-              EMAILJS_CONFIG.AUTOREPLY_TEMPLATE_ID,
-              {
-                full_name: form.full_name.value,
-                phone: form.phone.value,
-                email: form.email.value,
-                service: form.service.value,
-                message: form.message.value,
-              },
-              { publicKey: EMAILJS_CONFIG.PUBLIC_KEY }
-            );
-          } catch (replyErr) {
-            console.warn("[EmailJS] auto-reply failed:", replyErr);
-          }
+          // Auto-reply to the visitor is sent server-side by EmailJS:
+          // the "Send inquiry" template (template_mehiq6z) has its built-in
+          // Auto-Reply enabled, pointing at template_3ulgtnn. Do NOT call
+          // emailjs.send with that template here, or visitors get it twice.
           showToast("Inquiry sent — Dr. Sinha will get back to you shortly.", "success");
         } else {
           // --- DEMO MODE (no keys yet): simulate + surface the fallback path ---
@@ -412,9 +402,10 @@ async function sendWithBackend(formData) {
         form.reset();
       } catch (err) {
         console.error("[EmailJS] submission failed:", err);
-        formStatus.innerHTML = '<span class="text-[#C74B3D]">We couldn\'t send your inquiry. Please try again, or call +91 98XXX XXXXX.</span>';
-        showToast("Sending failed — please retry or call the clinic.", "error");
+        formStatus.innerHTML = '<span class="text-[#C74B3D]">We couldn\'t send your inquiry. Please try again, or call +91 9980901103.</span>';
+        showToast("Sending failed — please retry or call +91 9980901103.", "error");
       } finally {
+        submitting = false;
         setSending(false);
       }
     });

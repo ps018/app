@@ -60,3 +60,7 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 
 ## Revision v4 (2026-09-29, user-requested)
 - Floating WhatsApp chat button (wa.me/919980901103, prefilled greeting, expanding pill on hover, hidden label on mobile, sits below toasts/modals)
+
+## Revision v5 (2026-09-29, bugfix)
+- Fixed duplicate auto-reply: visitor got the reply twice because BOTH the EmailJS dashboard built-in auto-reply (on template_mehiq6z) and a code-side emailjs.send to template_3ulgtnn fired per inquiry. Removed the code-side send; dashboard auto-reply is now the single mechanism. Added a submitting-flag idempotency guard (Enter-spam/double-submit safe). Also fixed leftover placeholder phone/clinic wording in form error strings.
+- Verified via network interception: one submission with Enter-spam mid-flight => exactly 1 EmailJS API request (inquiry), 0 code-side auto-reply calls, success state shown.

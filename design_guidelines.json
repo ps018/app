@@ -1,0 +1,213 @@
+{
+  "project_identity": {
+    "doctor_name": "Dr. Aditi Deshmukh, MDS",
+    "specialty": "Periodontics & Implantology",
+    "locations": ["Thane", "Mumbai", "Navi Mumbai"],
+    "tagline": "Precision Periodontal Care & Permanent Dental Implant Restoration",
+    "phone": "+91 98XXX XXXXX",
+    "email": "hello@drname.com",
+    "operating_hours": "Mon - Sun: 09:00 AM - 08:00 PM (By Appointment)"
+  },
+  "design_archetype": {
+    "name": "Clinical Excellence & Soft Luxury Warmth",
+    "vibe": "Trustworthy, serene, board-certified precision with soft gold & clinical teal accent highlights. No generic digital slop."
+  },
+  "typography": {
+    "heading_font": "Outfit, sans-serif",
+    "serif_heading_font": "Cormorant Garamond, serif",
+    "body_font": "Plus Jakarta Sans, sans-serif",
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 leading-[1.15]",
+      "h2_section": "text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight",
+      "h3_card": "text-xl sm:text-2xl font-medium text-slate-900",
+      "body_text": "text-base sm:text-lg text-slate-600 leading-relaxed",
+      "label_accent": "text-xs font-bold tracking-[0.2em] uppercase text-teal-700"
+    }
+  },
+  "color_palette": {
+    "background_main": "#F8FAF9",
+    "surface_white": "#FFFFFF",
+    "slate_body": "#334155",
+    "slate_heading": "#0F172A",
+    "clinical_blue": "#0F2C59",
+    "teal_primary": "#0D9488",
+    "teal_light": "#CCFBF1",
+    "gold_accent": "#C5A059",
+    "gold_subtle": "#FFFDF5",
+    "border_subtle": "#E2E8F0",
+    "shadow_soft": "0 10px 30px -5px rgba(15, 44, 89, 0.05)"
+  },
+  "navigation": {
+    "header_style": "Sticky header with backdrop-blur-md bg-white/85 border-b border-slate-200/60 z-50 px-6 py-4 transition-all duration-300",
+    "brand_logo": "Custom dual-arc SVG emblem in Gold (#C5A059) & Teal (#0D9488) paired with 'Dr. Aditi Deshmukh' in Outfit medium font",
+    "links": [
+      { "label": "Home", "href": "#home", "testid": "nav-link-home" },
+      { "label": "About", "href": "#about", "testid": "nav-link-about" },
+      { "label": "Specializations", "href": "#specializations", "testid": "nav-link-specializations" },
+      { "label": "Case Studies", "href": "#cases", "testid": "nav-link-cases" },
+      { "label": "Contact Us", "href": "#contact", "testid": "nav-link-contact" }
+    ],
+    "cta_button": {
+      "text": "Book Consultation",
+      "href": "#appointment",
+      "style": "bg-slate-900 hover:bg-teal-700 text-white font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-200",
+      "testid": "nav-btn-book-consultation"
+    }
+  },
+  "hero_section": {
+    "layout": "2-column split layout with generous 24px/32px padding, soft clinical background gradient (#F8FAF9 to #EEF2F6)",
+    "headline": "Restoring Natural Smiles with Board-Certified Precision",
+    "subheadline": "Advanced Periodontics, Laser Micro-Surgery & Full-Arch Dental Implantology across Thane, Mumbai & Navi Mumbai.",
+    "trust_badges": [
+      "MDS Board-Certified Periodontist",
+      "12+ Years Clinical Mastery",
+      "1,800+ Successful Implant Restorations",
+      "Laser-Assisted Minimally Invasive Care"
+    ],
+    "primary_cta": {
+      "text": "Schedule Specialist Consultation",
+      "href": "#appointment",
+      "testid": "hero-primary-cta"
+    },
+    "secondary_cta": {
+      "text": "Explore Case Comparisons",
+      "href": "#cases",
+      "testid": "hero-secondary-cta"
+    },
+    "hero_image": "https://images.unsplash.com/photo-1734002886107-168181bcd6a1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkZW50aXN0JTIwZG9jdG9yJTIwcG9ydHJhaXQlMjBzbWlsZSUyMGNsaW5pY3xlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "editorial_marquee": {
+    "style": "Low-contrast subtle ribbon background (#EEF4F2) with gold divider dots and slow momentum scroll",
+    "items": [
+      "Board Certified Periodontist",
+      "Sinus Lift & Bone Augmentation",
+      "Peri-Implantitis Resolution",
+      "Gummy Smile Correction",
+      "Painless Laser Frenectomy",
+      "Full-Arch Implantology",
+      "Thane • Mumbai • Navi Mumbai"
+    ]
+  },
+  "sections": [
+    {
+      "id": "about",
+      "title": "Practice Overview & Credentials",
+      "subtitle": "Patient-First Philosophy Rooted in Surgical Excellence",
+      "doctor": {
+        "name": "Dr. Aditi Deshmukh",
+        "title": "MDS — Periodontics & Implantology",
+        "bio": "Specializing in the diagnosis, prevention, and surgical treatment of periodontal disease, alongside state-of-the-art dental implant placement. Dr. Deshmukh combines micro-surgical precision with compassionate patient care.",
+        "image": "https://images.unsplash.com/photo-1683349370055-7eba66a404c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjBkZW50aXN0JTIwZG9jdG9yJTIwcG9ydHJhaXQlMjBzbWlsZSUyMGNsaW5pY3xlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85"
+      },
+      "highlights": [
+        { "stat": "12+", "label": "Years Specialization" },
+        { "stat": "1,800+", "label": "Implants Placed" },
+        { "stat": "99.2%", "label": "Osseointegration Success" },
+        { "stat": "3", "label": "Prime Clinics (Thane / Mumbai / Navi Mumbai)" }
+      ]
+    },
+    {
+      "id": "specializations",
+      "title": "Specialized Clinical Pillars",
+      "subtitle": "Evidence-Based Surgical & Restorative Dentistry",
+      "pillars": [
+        {
+          "category": "Dental Implants",
+          "items": [
+            "Single & Multi-Tooth Implant Placement",
+            "Sinus Lift & Crestal Elevation",
+            "Soft & Hard Tissue Augmentation (Bone Grafting)",
+            "Peri-Implantitis Surgical Management"
+          ]
+        },
+        {
+          "category": "Periodontal Care",
+          "items": [
+            "LANAP & Minimally Invasive Laser Therapy",
+            "Esthetic Gummy Smile Correction (Crown Lengthening)",
+            "Painless Soft Tissue Grafting & Frenectomy",
+            "Regenerative Flap Surgery"
+          ]
+        },
+        {
+          "category": "Preventive & Oral Surgery",
+          "items": [
+            "Deep Ultrasonic Scaling & Root Planing",
+            "Periodontal Maintenance Protocols",
+            "Pre-Prosthetic Oral Surgery",
+            "Guided Tissue Regeneration (GTR)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cases",
+      "title": "Clinical Case Studies",
+      "subtitle": "Interactive Before & After Visual Comparison",
+      "cases": [
+        {
+          "title": "Full-Arch Dental Implant Restoration",
+          "clinical_note": "6-month post-op result following guided bone regeneration and ceramic prosthesis placement.",
+          "before_img": "https://images.unsplash.com/photo-1663182234283-28941e7612da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk4MDZ8MA&ixlib=rb-4.1.0&q=85",
+          "after_img": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk4MDZ8MA&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          "title": "Esthetic Crown Lengthening & Laser Gummy Smile Correction",
+          "clinical_note": "Proportionate gingival margin alignment with 48-hour rapid tissue recovery.",
+          "before_img": "https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk4MDZ8MA&ixlib=rb-4.1.0&q=85",
+          "after_img": "https://images.unsplash.com/photo-1567516364473-233c4b6fcfbe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk4MDZ8MA&ixlib=rb-4.1.0&q=85"
+        }
+      ]
+    },
+    {
+      "id": "appointment",
+      "title": "Request a Specialist Appointment",
+      "subtitle": "Direct Priority Consultation Booking",
+      "form_fields": [
+        { "name": "fullName", "label": "Full Name", "type": "text", "required": true, "testid": "input-full-name" },
+        { "name": "phone", "label": "Phone Number", "type": "tel", "required": true, "testid": "input-phone" },
+        { "name": "email", "label": "Email Address", "type": "email", "required": true, "testid": "input-email" },
+        { "name": "service", "label": "Preferred Service", "type": "select", "options": ["Dental Implants", "Periodontal Care / Laser Therapy", "Preventive Maintenance", "Gummy Smile / Esthetic Surgery", "Second Opinion / Consultation"], "required": true, "testid": "select-service" },
+        { "name": "preferredDate", "label": "Preferred Date Range", "type": "text", "placeholder": "e.g. Next Mon-Wed Morning", "required": false, "testid": "input-date-range" },
+        { "name": "notes", "label": "Clinical Notes or Questions", "type": "textarea", "required": false, "testid": "textarea-notes" }
+      ],
+      "submit_button": {
+        "text": "Submit Consultation Request",
+        "testid": "btn-submit-appointment"
+      }
+    }
+  ],
+  "contact_strip": {
+    "operating_days": "Monday through Sunday (09:00 AM – 08:00 PM)",
+    "practice_locations": [
+      { "city": "Thane Clinic", "address": "Gokhale Road, Naupada, Thane West" },
+      { "city": "Mumbai Clinic", "address": "Linking Road, Bandra West, Mumbai" },
+      { "city": "Navi Mumbai Clinic", "address": "Sector 17, Vashi, Navi Mumbai" }
+    ],
+    "phone": "+91 98XXX XXXXX",
+    "email": "hello@drname.com"
+  },
+  "footer": {
+    "disclaimer": "Medical Disclaimer: Information provided on this website is for educational purposes only and does not constitute formal medical or dental advice. An in-person consultation with Dr. Aditi Deshmukh is required for accurate diagnostic evaluation and customized treatment planning.",
+    "copyright": "© 2026 Dr. Aditi Deshmukh, MDS. All rights reserved.",
+    "links": [
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Terms of Care", "href": "#" },
+      { "label": "Patient Portal", "href": "#" }
+    ]
+  },
+  "image_urls": {
+    "doctor_portrait": "https://images.unsplash.com/photo-1734002886107-168181bcd6a1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkZW50aXN0JTIwZG9jdG9yJTIwcG9ydHJhaXQlMjBzbWlsZSUyMGNsaW5pY3xlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85",
+    "doctor_chair_side": "https://images.unsplash.com/photo-1683349370055-7eba66a404c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjBkZW50aXN0JTIwZG9jdG9yJTIwcG9ydHJhaXQlMjBzbWlsZSUyMGNsaW5pY3xlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85",
+    "clinic_interior_1": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkZW50YWwlMjBjbGluaWMlMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyZSUyMGx1eHVyeXxlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85",
+    "clinic_interior_2": "https://images.unsplash.com/photo-1629909615184-74f495363b67?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBkZW50YWwlMjBjbGluaWMlMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyZSUyMGx1eHVyeXxlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85",
+    "smile_case_1_after": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85",
+    "smile_case_1_before": "https://images.unsplash.com/photo-1663182234283-28941e7612da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85",
+    "smile_case_2_after": "https://images.unsplash.com/photo-1567516364473-233c4b6fcfbe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85",
+    "smile_case_2_before": "https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxzbWlsaW5nJTIwYWR1bHQlMjB3aGl0ZSUyMGhlYWx0aHklMjB0ZWV0aCUyMHNtaWxlJTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3OTA2NTk3OTl8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "testing_attributes": {
+    "rule": "All interactive buttons, links, form inputs, toggles, cards and key textual elements must carry distinct data-testid attributes for automated verification.",
+    "convention": "kebab-case, role-based, e.g., data-testid='input-full-name'"
+  }
+}

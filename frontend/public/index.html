@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Aditi Deshmukh, MDS — Periodontist & Implantologist | Thane, Mumbai, Navi Mumbai</title>
+  <meta name="description" content="Board-certified Periodontist & Implantologist specializing in dental implants, laser periodontal therapy and full-arch restoration. Clinics across Thane, Mumbai & Navi Mumbai. Open Mon–Sun." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dr. Aditi Deshmukh, MDS — Periodontics & Implantology" />
+  <meta property="og:description" content="Precision periodontal care & permanent dental implant restoration across Thane, Mumbai & Navi Mumbai." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Cormorant Garamond (display serif) + Outfit (headings/UI) + Plus Jakarta Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (Play CDN) — for production builds, compile Tailwind instead (see DOMAIN-HOSTING-GUIDE.md) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:   '#0F2C59',
+            night: '#0B1F3F',
+            teal:  { DEFAULT: '#0D9488', 50: '#F0FDFA', 100: '#CCFBF1', 700: '#0F766E' },
+            gold:  { DEFAULT: '#C5A059', light: '#E7D3A8', pale: '#F7EFDD' },
+            cream: '#F8FAF9',
+            mist:  '#EEF2F6'
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            head:    ['Outfit', 'sans-serif'],
+            sans:    ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 10px 30px -5px rgba(15,44,89,0.08)',
+            lift: '0 24px 48px -12px rgba(15,44,89,0.18)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- SEO: structured data for a dental practice (placeholders — update with real details) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dr. Aditi Deshmukh, MDS — Periodontics & Implantology",
+    "areaServed": ["Thane", "Mumbai", "Navi Mumbai"],
+    "telephone": "+91 98XXX XXXXX",
+    "email": "hello@drname.com",
+    "openingHours": "Mo-Su 09:00-20:00",
+    "medicalSpecialty": ["Periodontics", "Dentistry"]
+  }
+  </script>
+</head>
+
+<body class="bg-cream text-slate-600 font-sans antialiased selection:bg-gold selection:text-ink">
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" data-testid="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 transition-all duration-300" data-testid="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+      <a href="#home" class="group flex items-center gap-3" data-testid="nav-logo" aria-label="Dr. Aditi Deshmukh — home">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-ink shadow-soft transition-transform duration-300 group-hover:-rotate-6">
+          <svg width="24" height="24" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M32 18c-5-5.5-14-5-16.5 3-2 6.5 1.5 10 3 18 .8 4.4 5.8 4.4 6.8 0l2.7-11 2.7 11c1 4.4 6 4.4 6.8 0 1.5-8 5-11.5 3-18-2.5-8-11.5-8.5-16.5-3z" fill="#C5A059"/>
+            <path d="M20 14.5C23 9 28 7.5 32 10.5 36 7.5 41 9 44 14.5" stroke="#5EEAD4" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-head text-[15px] font-semibold tracking-tight text-ink">Dr. Aditi Deshmukh</span>
+          <span class="block text-[10.5px] font-semibold uppercase tracking-[0.22em] text-teal">Periodontics & Implantology</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <a href="#home"           class="nav-link" data-testid="nav-link-home">Home</a>
+        <a href="#about"          class="nav-link" data-testid="nav-link-about">About</a>
+        <a href="#specializations" class="nav-link" data-testid="nav-link-specializations">Specializations</a>
+        <a href="#cases"          class="nav-link" data-testid="nav-link-cases">Cases</a>
+        <a href="#contact"        class="nav-link" data-testid="nav-link-contact">Contact Us</a>
+      </nav>
+
+      <div class="hidden lg:block">
+        <a href="#appointment" class="btn-gold group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-head text-sm font-medium text-white transition-all duration-300 hover:bg-teal" data-testid="nav-btn-book-consultation">
+          Book Consultation
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <button id="navToggle" class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white/80 lg:hidden" data-testid="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span class="hamburger"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="mobileDrawer" class="mobile-drawer" data-testid="mobile-drawer" aria-hidden="true">
+    <nav class="flex h-full flex-col justify-center gap-2 px-10" aria-label="Mobile">
+      <a href="#home"            class="drawer-link" data-testid="drawer-link-home">Home</a>
+      <a href="#about"           class="drawer-link" data-testid="drawer-link-about">About</a>
+      <a href="#specializations" class="drawer-link" data-testid="drawer-link-specializations">Specializations</a>
+      <a href="#cases"           class="drawer-link" data-testid="drawer-link-cases">Cases</a>
+      <a href="#contact"         class="drawer-link" data-testid="drawer-link-contact">Contact Us</a>
+      <a href="#appointment"     class="drawer-link drawer-cta" data-testid="drawer-link-appointment">Book Consultation</a>
+      <p class="mt-10 text-xs uppercase tracking-[0.25em] text-teal-100/50">Thane · Mumbai · Navi Mumbai</p>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero relative overflow-hidden pb-20 pt-32 sm:pt-36 lg:pb-28 lg:pt-40" data-testid="hero-section">
+      <!-- ambient background -->
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="absolute -top-40 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-teal-50 blur-3xl"></div>
+        <div class="absolute bottom-[-20%] left-[-12%] h-[36rem] w-[36rem] rounded-full bg-gold-pale blur-3xl"></div>
+        <div class="hero-ring absolute right-[6%] top-[16%] hidden opacity-[0.16] lg:block">
+          <svg width="560" height="560" viewBox="0 0 560 560" fill="none"><circle cx="280" cy="280" r="278" stroke="#0F2C59" stroke-width="1" stroke-dasharray="2 10"/><circle cx="280" cy="280" r="212" stroke="#0D9488" stroke-width="1" stroke-dasharray="2 14"/></svg>
+        </div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(15,44,89,0.06)_1px,transparent_0)] [background-size:26px_26px] opacity-60"></div>
+      </div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+        <!-- copy -->
+        <div>
+          <p class="hero-fade inline-flex items-center gap-2.5 rounded-full border border-teal-100 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal backdrop-blur" data-testid="hero-eyebrow" style="--d:.05s">
+            <span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
+            Board-Certified Periodontist & Implantologist
+          </p>
+
+          <h1 class="mt-7 font-display text-[2.6rem] font-semibold leading-[1.06] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[4rem]" data-testid="hero-headline">
+            <span class="line-mask"><span class="line-inner" style="--d:.15s">Restoring natural smiles</span></span>
+            <span class="line-mask"><span class="line-inner" style="--d:.28s">with <em class="font-display italic text-teal">board-certified</em></span></span>
+            <span class="line-mask"><span class="line-inner" style="--d:.41s">precision.</span></span>
+          </h1>
+
+          <p class="hero-fade mt-7 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="hero-subheadline" style="--d:.55s">
+            Advanced periodontal therapy, laser micro-surgery and full-arch dental implantology —
+            delivered with calm, evidence-based care across <strong class="font-semibold text-ink">Thane, Mumbai & Navi Mumbai</strong>.
+          </p>
+
+          <div class="hero-fade mt-9 flex flex-wrap items-center gap-4" style="--d:.68s" data-testid="hero-cta-row">
+            <a href="#appointment" class="btn-gold group inline-flex items-center gap-2.5 rounded-full bg-teal px-8 py-4 font-head text-[15px] font-medium text-white shadow-soft transition-all duration-300 hover:bg-ink hover:shadow-lift" data-testid="hero-primary-cta">
+              Schedule Specialist Consultation
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#cases" class="inline-flex items-center gap-2.5 rounded-full border border-ink/15 bg-white/70 px-8 py-4 font-head text-[15px] font-medium text-ink backdrop-blur transition-all duration-300 hover:border-gold hover:text-teal" data-testid="hero-secondary-cta">
+              Explore Case Comparisons
+            </a>
+          </div>
+
+          <!-- trust badges -->
+          <ul class="hero-fade mt-12 grid max-w-xl grid-cols-2 gap-x-6 gap-y-4 border-t border-slate-200/80 pt-8 sm:grid-cols-4" data-testid="hero-trust-badges" style="--d:.8s">
+            <li class="trust-badge" data-testid="hero-trust-badge-1"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5.2 5.6.6-4.2 3.9 1.2 5.6L12 14.5l-5 2.8 1.2-5.6L4 7.8l5.6-.6z"/></svg>MDS Board-Certified</li>
+            <li class="trust-badge" data-testid="hero-trust-badge-2"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>12+ Years Clinical Mastery</li>
+            <li class="trust-badge" data-testid="hero-trust-badge-3"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l-9 9-5-5"/></svg>1,800+ Implant Restorations</li>
+            <li class="trust-badge" data-testid="hero-trust-badge-4"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 10h-6.5z"/></svg>Laser Minimally Invasive Care</li>
+          </ul>
+        </div>
+
+        <!-- portrait -->
+        <div class="relative mx-auto w-full max-w-md lg:max-w-none" data-testid="hero-visual">
+          <div class="hero-fade relative mx-auto w-[86%] sm:w-[74%] lg:w-[82%]" style="--d:.3s">
+            <div class="absolute -inset-3 rounded-b-[3rem] rounded-t-[12rem] border border-gold/40" aria-hidden="true"></div>
+            <div class="hero-frame overflow-hidden rounded-b-[3rem] rounded-t-[12rem] shadow-lift">
+              <img id="heroImage" src="https://images.unsplash.com/photo-1734002886107-168181bcd6a1?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Dr. Aditi Deshmukh, Periodontist and Implantologist" class="h-[30rem] w-full object-cover sm:h-[34rem]" data-testid="hero-image" />
+            </div>
+            <!-- floating cards -->
+            <div class="float-card float-a absolute -right-2 top-16 hidden items-center gap-3 rounded-2xl bg-white/95 px-5 py-4 shadow-lift backdrop-blur sm:flex" data-testid="hero-float-implants">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-gold-pale"><svg class="h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5.2 5.6.6-4.2 3.9 1.2 5.6L12 14.5l-5 2.8 1.2-5.6L4 7.8l5.6-.6z"/></svg></span>
+              <span class="leading-tight"><span class="block font-head text-lg font-semibold text-ink">1,800+</span><span class="block text-[11px] uppercase tracking-wider text-slate-500">Implants placed</span></span>
+            </div>
+            <div class="float-card float-b absolute -left-4 bottom-10 hidden items-center gap-3 rounded-2xl bg-ink px-5 py-4 shadow-lift sm:flex" data-testid="hero-float-laser">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-teal/20"><svg class="h-5 w-5 text-teal-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 10h-6.5z"/></svg></span>
+              <span class="leading-tight"><span class="block font-head text-lg font-semibold text-white">Painless</span><span class="block text-[11px] uppercase tracking-wider text-teal-100/70">Laser dentistry</span></span>
+            </div>
+            <!-- rotating stamp -->
+            <div class="stamp absolute -right-8 bottom-6 z-10 hidden h-28 w-28 lg:block" aria-hidden="true" data-testid="hero-stamp">
+              <svg viewBox="0 0 100 100" class="h-full w-full">
+                <defs><path id="stampCircle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+                <text class="stamp-text"><textPath href="#stampCircle">PERIODONTICS · IMPLANTOLOGY · PERIODONTICS · IMPLANTOLOGY ·</textPath></text>
+                <circle cx="50" cy="50" r="17" fill="none" stroke="#C5A059" stroke-width="1.4"/>
+                <path d="M50 42c-2.5-2.7-7-2.5-8.2 1.5-1 3.2.7 5 1.5 9 .4 2.2 2.9 2.2 3.4 0l1.3-5.4 1.3 5.4c.5 2.2 3 2.2 3.4 0 .8-4 2.5-5.8 1.5-9-1.2-4-5.7-4.2-8.2-1.5z" fill="#C5A059"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDITORIAL MARQUEE ============ -->
+    <div class="marquee border-y border-slate-200/70 bg-mist py-5" data-testid="marquee-track" aria-label="Areas of expertise">
+      <div class="marquee-inner" id="marqueeInner">
+        <div class="marquee-track">
+          <span>Board Certified Periodontist</span><i class="dot"></i>
+          <span>Sinus Lift & Bone Augmentation</span><i class="dot"></i>
+          <span>Peri-Implantitis Resolution</span><i class="dot"></i>
+          <span>Gummy Smile Correction</span><i class="dot"></i>
+          <span>Painless Laser Frenectomy</span><i class="dot"></i>
+          <span>Full-Arch Implantology</span><i class="dot"></i>
+          <span>Thane · Mumbai · Navi Mumbai</span><i class="dot"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section-pad" data-testid="about-section">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
+        <div class="relative reveal" data-testid="about-visual">
+          <div class="relative w-[88%] sm:w-[78%] lg:w-[84%]">
+            <div class="overflow-hidden rounded-[2.5rem] shadow-lift">
+              <img src="https://images.unsplash.com/photo-1683349370055-7eba66a404c6?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Dr. Aditi Deshmukh with a patient at the dental chair" class="h-[30rem] w-full object-cover sm:h-[34rem]" data-testid="about-image" />
+            </div>
+            <div class="absolute -bottom-8 -right-2 rounded-3xl bg-ink px-7 py-6 shadow-lift sm:-right-8" data-testid="about-exp-badge">
+              <span class="block font-display text-5xl font-semibold text-gold" data-count="12" data-suffix="+" data-testid="stat-years">12+</span>
+              <span class="mt-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-100/80">Years of specialization</span>
+            </div>
+            <div class="absolute -left-3 top-8 hidden rounded-2xl border border-slate-200 bg-white/90 px-5 py-4 shadow-soft backdrop-blur sm:block" data-testid="about-clinic-badge">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-teal">The practice</p>
+              <p class="mt-1 font-head text-sm font-medium text-ink">Calm · Sterile · Evidence-led</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="--d:.15s">
+          <p class="section-eyebrow" data-testid="about-eyebrow">Practice Overview</p>
+          <h2 class="section-title" data-testid="about-title">A patient-first philosophy, rooted in surgical precision.</h2>
+          <p class="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="about-bio">
+            Dr. Aditi Deshmukh specializes in the diagnosis, prevention and surgical treatment of periodontal
+            disease, alongside state-of-the-art dental implant placement. Her approach combines micro-surgical
+            precision with unhurried, compassionate care — every treatment plan is explained in plain language,
+            priced transparently and paced around your comfort.
+          </p>
+
+          <ul class="mt-8 space-y-3.5" data-testid="about-credentials"><!-- TODO: replace with the doctor's actual degrees & institutions -->
+            <li class="credential" data-testid="credential-1"><span class="cred-icon">MDS</span>Master of Dental Surgery — Periodontology <span class="text-slate-400">(Board-certified)</span></li>
+            <li class="credential" data-testid="credential-2"><span class="cred-icon">BDS</span>Bachelor of Dental Surgery — Mumbai University</li>
+            <li class="credential" data-testid="credential-3"><span class="cred-icon">FIA</span>Fellowship in Oral Implantology & Advanced Bone Grafting</li>
+          </ul>
+
+          <blockquote class="mt-9 border-l-2 border-gold pl-6" data-testid="about-quote">
+            <p class="font-display text-2xl italic leading-snug text-ink">"Healthy gums are the foundation of every confident smile — we build on nothing less."</p>
+            <footer class="mt-3 font-head text-sm font-medium text-teal">— Dr. Aditi Deshmukh</footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- stat band -->
+      <div class="mx-auto mt-20 max-w-7xl px-5 sm:px-8">
+        <div class="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-200/80 shadow-soft lg:grid-cols-4" data-testid="about-stats"><!-- NOTE: figures are editable placeholders -->
+          <div class="stat-cell reveal" data-testid="stat-cell-years"><span class="stat-num" data-count="12" data-suffix="+">12+</span><span class="stat-label">Years of specialization</span></div>
+          <div class="stat-cell reveal" style="--d:.08s" data-testid="stat-cell-implants"><span class="stat-num" data-count="1800" data-suffix="+" data-comma="true">1,800+</span><span class="stat-label">Successful implants placed</span></div>
+          <div class="stat-cell reveal" style="--d:.16s" data-testid="stat-cell-success"><span class="stat-num" data-count="99.2" data-suffix="%" data-decimals="1">99.2%</span><span class="stat-label">Osseointegration success</span></div>
+          <div class="stat-cell reveal" style="--d:.24s" data-testid="stat-cell-clinics"><span class="stat-num" data-count="3">3</span><span class="stat-label">Clinics — Thane / Mumbai / Navi Mumbai</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPECIALIZATIONS ============ -->
+    <section id="specializations" class="section-pad bg-white" data-testid="specializations-section">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="section-eyebrow" data-testid="specializations-eyebrow">Specialized Services</p>
+          <h2 class="section-title" data-testid="specializations-title">Three clinical pillars. One standard of care.</h2>
+          <p class="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="specializations-sub">From single-tooth implants to complex full-arch reconstruction — every procedure is planned digitally, performed micro-surgically and monitored long-term.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3 lg:gap-8">
+          <!-- Pillar 1 -->
+          <article class="service-card reveal group" data-testid="service-card-implants">
+            <div class="service-top"><span class="service-num">01</span>
+              <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-2.6-2.8-7.2-2.5-8.4 1.6-1 3.3.8 5.1 1.6 9.2.4 2.3 3 2.3 3.5 0l1.4-5.7 1.4 5.7c.5 2.3 3.1 2.3 3.5 0 .8-4.1 2.6-5.9 1.6-9.2C15.4 1 14 1.9 12 3.5z" transform="translate(0 4)"/><path d="M7 5.5V3.8a1.3 1.3 0 011.3-1.3h7.4A1.3 1.3 0 0117 3.8v1.7M8.5 19.5h7"/></svg></span>
+            </div>
+            <h3 class="service-title" data-testid="service-implants-title">Dental Implants</h3>
+            <p class="service-copy">Permanent, natural-feeling tooth replacement planned with 3D imaging and guided surgery.</p>
+            <ul class="service-list">
+              <li data-testid="service-implants-item-1">Single & multi-tooth implant placement</li>
+              <li data-testid="service-implants-item-2">Sinus lift & crestal elevation</li>
+              <li data-testid="service-implants-item-3">Soft & hard tissue augmentation (bone grafting)</li>
+              <li data-testid="service-implants-item-4">Peri-implantitis surgical management</li>
+            </ul>
+            <a href="#appointment" class="service-link" data-testid="service-implants-link">Consult for implants<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="service-card reveal group" style="--d:.12s" data-testid="service-card-periodontal">
+            <div class="service-top"><span class="service-num">02</span>
+              <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.5c-2.6-2.8-7.2-2.5-8.4 1.6-1 3.3.8 5.1 1.6 9.2.4 2.3 3 2.3 3.5 0l1.4-5.7 1.4 5.7c.5 2.3 3.1 2.3 3.5 0 .8-4.1 2.6-5.9 1.6-9.2C15.4 5 14 5.9 12 7.5z" transform="translate(0 2)"/><path d="M17.5 2.5l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2z"/></svg></span>
+            </div>
+            <h3 class="service-title" data-testid="service-periodontal-title">Periodontal Care</h3>
+            <p class="service-copy">Gum health restored with laser-assisted protocols — minimal cutting, rapid healing.</p>
+            <ul class="service-list">
+              <li data-testid="service-periodontal-item-1">LANAP & minimally invasive laser therapy</li>
+              <li data-testid="service-periodontal-item-2">Esthetic gummy smile correction (crown lengthening)</li>
+              <li data-testid="service-periodontal-item-3">Soft-tissue grafting & painless laser frenectomy</li>
+              <li data-testid="service-periodontal-item-4">Regenerative flap surgery</li>
+            </ul>
+            <a href="#appointment" class="service-link" data-testid="service-periodontal-link">Consult for gum care<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="service-card reveal group" style="--d:.24s" data-testid="service-card-preventive">
+            <div class="service-top"><span class="service-num">03</span>
+              <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7.5 3v6c0 4.8-3.2 8.2-7.5 10-4.3-1.8-7.5-5.2-7.5-10v-6z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.6"/></svg></span>
+            </div>
+            <h3 class="service-title" data-testid="service-preventive-title">Preventive Maintenance & Oral Surgery</h3>
+            <p class="service-copy">Structured maintenance that protects your investment — and your smile — for decades.</p>
+            <ul class="service-list">
+              <li data-testid="service-preventive-item-1">Deep ultrasonic scaling & root planing</li>
+              <li data-testid="service-preventive-item-2">Periodontal maintenance protocols</li>
+              <li data-testid="service-preventive-item-3">Flap surgery & guided tissue regeneration</li>
+              <li data-testid="service-preventive-item-4">Pre-prosthetic oral surgery</li>
+            </ul>
+            <a href="#appointment" class="service-link" data-testid="service-preventive-link">Book a maintenance visit<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER CASE STUDIES ============ -->
+    <section id="cases" class="section-pad" data-testid="cases-section">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center reveal">
+          <p class="section-eyebrow justify-center" data-testid="cases-eyebrow">Clinical Case Studies</p>
+          <h2 class="section-title" data-testid="cases-title">See the difference. Drag the line.</h2>
+          <p class="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="cases-sub">Illustrative clinical diagrams — slide left to right to compare before and after results. Real patient photographs are displayed in-clinic with consent.</p>
+        </div>
+
+        <!-- case tabs -->
+        <div class="mt-10 flex flex-wrap justify-center gap-3 reveal" data-testid="ba-tabs" role="tablist" aria-label="Select a case">
+          <button class="ba-tab is-active" data-case="0" role="tab" aria-selected="true" data-testid="ba-tab-1">Full-Arch Restoration</button>
+          <button class="ba-tab" data-case="1" role="tab" aria-selected="false" data-testid="ba-tab-2">Single Implant</button>
+          <button class="ba-tab" data-case="2" role="tab" aria-selected="false" data-testid="ba-tab-3">Gummy Smile</button>
+        </div>
+
+        <!-- Case 0 : Full-arch -->
+        <div class="ba-wrap reveal" style="--d:.1s" data-testid="ba-case-0">
+          <div class="ba-slider" id="baSlider0" data-testid="ba-slider-0" role="group" aria-label="Before and after comparison — full-arch restoration">
+            <div class="ba-layer">
+              <!-- BEFORE diagram -->
+              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="Before: failing upper dentition" role="img">
+                <defs>
+                  <linearGradient id="bgB0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
+                </defs>
+                <rect width="800" height="560" fill="url(#bgB0)"/>
+                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
+                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
+                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 1A — PRE-OP</text>
+                <!-- inflamed gum band -->
+                <rect x="70" y="112" width="660" height="102" rx="44" fill="#E08A80"/>
+                <rect x="70" y="112" width="660" height="26" rx="13" fill="#D67A70" opacity="0.6"/>
+                <!-- teeth (compromised) -->
+                <g>
+                  <rect x="101" y="168" width="58" height="128" rx="18" fill="#C9CFCA" stroke="#B7BFBA" stroke-width="2"/>
+                  <rect x="169" y="168" width="52" height="140" rx="16" fill="#C2C9C4" stroke="#B0B8B3" stroke-width="2" transform="rotate(4 195 238)"/>
+                  <rect x="231" y="168" width="50" height="150" rx="16" fill="#CBCFCA" stroke="#B7BFBA" stroke-width="2"/>
+                  <!-- missing tooth gap at 291 -->
+                  <rect x="349" y="168" width="46" height="104" rx="14" fill="#BEC5C0" stroke="#ACB4AF" stroke-width="2"/>
+                  <rect x="405" y="168" width="46" height="160" rx="14" fill="#C9CFCA" stroke="#B7BFBA" stroke-width="2" transform="rotate(-3 428 248)"/>
+                  <rect x="461" y="168" width="48" height="120" rx="15" fill="#C2C8C3" stroke="#B0B8B3" stroke-width="2"/>
+                  <rect x="519" y="168" width="50" height="150" rx="16" fill="#CBCFC9" stroke="#B7BFBA" stroke-width="2"/>
+                  <rect x="579" y="168" width="52" height="140" rx="16" fill="#C6CCC7" stroke="#B0B8B3" stroke-width="2" transform="rotate(-4 605 238)"/>
+                  <rect x="641" y="168" width="58" height="128" rx="18" fill="#C9CFCA" stroke="#B7BFBA" stroke-width="2"/>
+                </g>
+                <!-- swollen papillae -->
+                <g fill="#D67A70">
+                  <path d="M156 206q10 44 20 0z"/><path d="M218 206q10 44 20 0z"/><path d="M278 206q10 44 20 0z"/><path d="M336 206q10 44 20 0z"/><path d="M392 206q10 44 20 0z"/><path d="M448 206q10 44 20 0z"/><path d="M506 206q10 44 20 0z"/><path d="M566 206q10 44 20 0z"/><path d="M628 206q10 44 20 0z"/>
+                </g>
+                <!-- annotation -->
+                <g fill="none" stroke="#C5A059" stroke-width="2">
+                  <path d="M270 356h100" stroke-dasharray="4 6"/>
+                </g>
+                <text x="270" y="386" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F2C59" fill-opacity="0.55">MISSING · WORN · DISCOLORED</text>
+              </svg>
+              <span class="ba-label ba-label-before" data-testid="ba-label-before">Before</span>
+            </div>
+            <div class="ba-layer ba-after">
+              <!-- AFTER diagram -->
+              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="After: full-arch implant restoration" role="img">
+                <defs>
+                  <linearGradient id="bgA0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
+                  <linearGradient id="toothA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0F4F2"/></linearGradient>
+                </defs>
+                <rect width="800" height="560" fill="url(#bgA0)"/>
+                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
+                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
+                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 1B — POST-OP</text>
+                <!-- healthy gum band -->
+                <rect x="70" y="128" width="660" height="86" rx="40" fill="#F2C4BD"/>
+                <!-- uniform restored arch -->
+                <g fill="url(#toothA)" stroke="#D9E0DD" stroke-width="2">
+                  <rect x="101" y="176" width="58" height="132" rx="18"/>
+                  <rect x="169" y="176" width="52" height="144" rx="16"/>
+                  <rect x="231" y="176" width="50" height="154" rx="16"/>
+                  <rect x="291" y="176" width="48" height="160" rx="15"/>
+                  <rect x="349" y="176" width="46" height="164" rx="14"/>
+                  <rect x="405" y="176" width="46" height="164" rx="14"/>
+                  <rect x="461" y="176" width="48" height="160" rx="15"/>
+                  <rect x="519" y="176" width="50" height="154" rx="16"/>
+                  <rect x="579" y="176" width="52" height="144" rx="16"/>
+                  <rect x="641" y="176" width="58" height="132" rx="18"/>
+                </g>
+                <g fill="#F2C4BD">
+                  <path d="M156 214q10 40 20 0z"/><path d="M218 214q10 40 20 0z"/><path d="M278 214q10 40 20 0z"/><path d="M336 214q10 40 20 0z"/><path d="M392 214q10 40 20 0z"/><path d="M448 214q10 40 20 0z"/><path d="M506 214q10 40 20 0z"/><path d="M566 214q10 40 20 0z"/><path d="M628 214q10 40 20 0z"/>
+                </g>
+                <text x="262" y="420" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F766E">FIXED FULL-CERAMIC PROSTHESIS · 12 UNITS</text>
+              </svg>
+              <span class="ba-label ba-label-after" data-testid="ba-label-after">After</span>
+            </div>
+            <div class="ba-handle" data-testid="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider — drag or use arrow keys" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="ba-grip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+            </div>
+            <div class="ba-note" data-testid="ba-note-0">
+              <p class="font-head text-sm font-semibold text-white sm:text-base">Full-Arch Implant Restoration</p>
+              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">6-month post-op result following guided bone regeneration and fixed ceramic prosthesis placement.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 1 : Single implant (hidden initially) -->
+        <div class="ba-wrap hidden" data-testid="ba-case-1">
+          <div class="ba-slider" id="baSlider1" data-testid="ba-slider-1" role="group" aria-label="Before and after comparison — single implant">
+            <div class="ba-layer">
+              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="Before: missing lower molar" role="img">
+                <defs><linearGradient id="bgB1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient></defs>
+                <rect width="800" height="560" fill="url(#bgB1)"/>
+                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
+                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
+                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 2A — PRE-OP</text>
+                <rect x="70" y="118" width="660" height="94" rx="42" fill="#F2C4BD"/>
+                <g fill="#FBFCFB" stroke="#D9E0DD" stroke-width="2">
+                  <rect x="101" y="172" width="58" height="130" rx="18"/><rect x="169" y="172" width="52" height="142" rx="16"/>
+                  <rect x="231" y="172" width="50" height="152" rx="16"/><rect x="291" y="172" width="48" height="158" rx="15"/>
+                  <rect x="349" y="172" width="46" height="162" rx="14"/><rect x="405" y="172" width="46" height="162" rx="14"/>
+                  <rect x="461" y="172" width="48" height="158" rx="15"/><rect x="519" y="172" width="50" height="152" rx="16"/>
+                  <!-- gap here (579) --><rect x="641" y="172" width="58" height="130" rx="18"/>
+                </g>
+                <g fill="#F2C4BD"><path d="M156 218q10 38 20 0z"/><path d="M218 218q10 38 20 0z"/><path d="M278 218q10 38 20 0z"/><path d="M336 218q10 38 20 0z"/><path d="M392 218q10 38 20 0z"/><path d="M448 218q10 38 20 0z"/><path d="M506 218q10 38 20 0z"/><path d="M628 218q10 38 20 0z"/></g>
+                <!-- gap annotation -->
+                <circle cx="605" cy="255" r="58" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="5 6"/>
+                <text x="475" y="382" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F2C59" fill-opacity="0.55">MISSING MOLAR · #46 REGION</text>
+              </svg>
+              <span class="ba-label ba-label-before">Before</span>
+            </div>
+            <div class="ba-layer ba-after">
+              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="After: implant and zirconia crown" role="img">
+                <defs>
+                  <linearGradient id="bgA1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
+                  <linearGradient id="toothA1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0F4F2"/></linearGradient>
+                </defs>
+                <rect width="800" height="560" fill="url(#bgA1)"/>
+                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
+                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
+                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 2B — POST-OP</text>
+                <rect x="70" y="118" width="660" height="94" rx="42" fill="#F2C4BD"/>
+                <g fill="url(#toothA1)" stroke="#D9E0DD" stroke-width="2">
+                  <rect x="101" y="172" width="58" height="130" rx="18"/><rect x="169" y="172" width="52" height="142" rx="16"/>
+                  <rect x="231" y="172" width="50" height="152" rx="16"/><rect x="291" y="172" width="48" height="158" rx="15"/>
+                  <rect x="349" y="172" width="46" height="162" rx="14"/><rect x="405" y="172" width="46" height="162" rx="14"/>
+                  <rect x="461" y="172" width="48" height="158" rx="15"/><rect x="519" y="172" width="50" height="152" rx="16"/>
+                  <rect x="579" y="172" width="52" height="146" rx="16" fill="#FFFFFF" stroke="#C5A059" stroke-width="2.5"/>
+                  <rect x="641" y="172" width="58" height="130" rx="18"/>
+                </g>
+                <g fill="#F2C4BD"><path d="M156 218q10 38 20 0z"/><path d="M218 218q10 38 20 0z"/><path d="M278 218q10 38 20 0z"/><path d="M336 218q10 38 20 0z"/><path d="M392 218q10 38 20 0z"/><path d="M448 218q10 38 20 0z"/><path d="M506 218q10 38 20 0z"/><path d="M566 218q10 38 20 0z"/><path d="M628 218q10 38 20 0z"/></g>
+                <circle cx="605" cy="255" r="58" fill="none" stroke="#C5A059" stroke-width="2.5"/>
+                <path d="M605 318v34" stroke="#C5A059" stroke-width="2"/>
+                <text x="470" y="382" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F766E">IMPLANT + ZIRCONIA CROWN</text>
+              </svg>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-handle" data-testid="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider — drag or use arrow keys" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="ba-grip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+            </div>
+            <div class="ba-note" data-testid="ba-note-1">
+              <p class="font-head text-sm font-semibold text-white sm:text-base">Single-Tooth Implant & Crown</p>
+              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">Delayed immediate implant with zirconia crown — 3-month osseointegration, no adjacent teeth touched.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2 : Gummy smile (hidden initially) -->
+        <div class="ba-wrap hidden" data-testid="ba-case-2">
+          <div class="ba-slider" id="baSlider2" data-testid="ba-slider-2" role="group" aria-label="Before and after comparison — gummy smile correction">
+            <div class="ba-layer">
+              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="Before: excessive gum display" role="img">
+                <defs><linearGradient id="bgB2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient></defs>
+                <rect width="800" height="560" fill="url(#bgB2)"/>
+                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
+                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
+                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 3A — PRE-OP</text>
+                <!-- tall gum band (gummy) -->
+                <rect x="70" y="86" width="660" height="150" rx="48" fill="#F2C4BD"/>
+                <!-- short teeth -->
+                <g fill="#FBFCFB" stroke="#D9E0DD" stroke-width="2">
+                  <rect x="101" y="216" width="58" height="88" rx="18"/><rect x="169" y="216" width="52" height="98" rx="16"/>
+                  <rect x="231" y="216" width="50" height="104" rx="16"/><rect x="291" y="216" width="48" height="108" rx="15"/>
+                  <rect x="349" y="216" width="46" height="112" rx="14"/><rect x="405" y="216" width="46" height="112" rx="14"/>
+                  <rect x="461" y="216" width="48" height="108" rx="15"/><rect x="519" y="216" width="50" height="104" rx="16"/>
+                  <rect x="579" y="216" width="52" height="98" rx="16"/><rect x="641" y="216" width="58" height="88" rx="18"/>
+                </g>
+                <g fill="#F2C4BD"><path d="M156 258q10 34 20 0z"/><path d="M218 258q10 34 20 0z"/><path d="M278 258q10 34 20 0z"/><path d="M336 258q10 34 20 0z"/><path d="M392 258q10 34 20 0z"/><path d="M448 258q10 34 20 0z"/><path d="M506 258q10 34 20 0z"/><path d="M566 258q10 34 20 0z"/><path d="M628 258q10 34 20 0z"/></g>
+                <text x="238" y="418" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F2C59" fill-opacity="0.55">EXCESSIVE GINGIVAL DISPLAY</text>
+              </svg>
+              <span class="ba-label ba-label-before">Before</span>
+            </div>
+            <div class="ba-layer ba-after">
+              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="After: balanced gum contour" role="img">
+                <defs>
+                  <linearGradient id="bgA2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
+                  <linearGradient id="toothA2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0F4F2"/></linearGradient>
+                </defs>
+                <rect width="800" height="560" fill="url(#bgA2)"/>
+                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
+                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
+                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 3B — POST-OP</text>
+                <!-- reduced gum band -->
+                <rect x="70" y="130" width="660" height="88" rx="40" fill="#F2C4BD"/>
+                <!-- longer teeth -->
+                <g fill="url(#toothA2)" stroke="#D9E0DD" stroke-width="2">
+                  <rect x="101" y="196" width="58" height="126" rx="18"/><rect x="169" y="196" width="52" height="138" rx="16"/>
+                  <rect x="231" y="196" width="50" height="148" rx="16"/><rect x="291" y="196" width="48" height="154" rx="15"/>
+                  <rect x="349" y="196" width="46" height="158" rx="14"/><rect x="405" y="196" width="46" height="158" rx="14"/>
+                  <rect x="461" y="196" width="48" height="154" rx="15"/><rect x="519" y="196" width="50" height="148" rx="16"/>
+                  <rect x="579" y="196" width="52" height="138" rx="16"/><rect x="641" y="196" width="58" height="126" rx="18"/>
+                </g>
+                <g fill="#F2C4BD"><path d="M156 240q10 38 20 0z"/><path d="M218 240q10 38 20 0z"/><path d="M278 240q10 38 20 0z"/><path d="M336 240q10 38 20 0z"/><path d="M392 240q10 38 20 0z"/><path d="M448 240q10 38 20 0z"/><path d="M506 240q10 38 20 0z"/><path d="M566 240q10 38 20 0z"/><path d="M628 240q10 38 20 0z"/></g>
+                <!-- old gum line reference -->
+                <path d="M70 236h660" stroke="#C5A059" stroke-width="2" stroke-dasharray="6 7"/>
+                <text x="240" y="418" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F766E">GUM LINE RECONTOURED — LASER</text>
+              </svg>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-handle" data-testid="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider — drag or use arrow keys" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="ba-grip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+            </div>
+            <div class="ba-note" data-testid="ba-note-2">
+              <p class="font-head text-sm font-semibold text-white sm:text-base">Esthetic Crown Lengthening — Gummy Smile</p>
+              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">Laser gingival contouring for a proportionate smile line; 48-hour rapid tissue recovery.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-8 text-center text-xs leading-relaxed text-slate-400" data-testid="ba-disclaimer">Illustrative diagrams for demonstration. Clinical photography is shared during in-person consultation.</p>
+      </div>
+    </section>
+
+    <!-- ============ APPOINTMENT FORM ============ -->
+    <section id="appointment" class="section-pad bg-white" data-testid="appointment-section">
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div class="reveal">
+          <p class="section-eyebrow" data-testid="appointment-eyebrow">Inquiry & Appointments</p>
+          <h2 class="section-title" data-testid="appointment-title">Request a specialist appointment.</h2>
+          <p class="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="appointment-sub">Share a few details and the clinic team will call you back to confirm a slot. Preferred date & time can be given as a range — we will match the closest availability.</p>
+
+          <ol class="mt-10 space-y-6" data-testid="appointment-steps">
+            <li class="step" data-testid="appointment-step-1"><span class="step-num">1</span><div><p class="font-head font-semibold text-ink">Submit your request</p><p class="mt-1 text-sm leading-relaxed text-slate-500">Takes under a minute — your details land directly in the doctor's inbox.</p></div></li>
+            <li class="step" data-testid="appointment-step-2"><span class="step-num">2</span><div><p class="font-head font-semibold text-ink">We call to confirm</p><p class="mt-1 text-sm leading-relaxed text-slate-500">Usually the same working day, within clinic hours 9 AM – 8 PM.</p></div></li>
+            <li class="step" data-testid="appointment-step-3"><span class="step-num">3</span><div><p class="font-head font-semibold text-ink">Consultation & plan</p><p class="mt-1 text-sm leading-relaxed text-slate-500">Digital scans, honest diagnosis and a transparent, phased treatment plan.</p></div></li>
+          </ol>
+
+          <div class="mt-10 flex flex-wrap gap-4" data-testid="appointment-quick-links">
+            <a href="tel:+9198XXXXXXX" class="quick-link" data-testid="quick-link-phone"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>+91 98XXX XXXXX</a>
+            <a href="mailto:hello@drname.com" class="quick-link" data-testid="quick-link-email"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 8l10 6 10-6"/></svg>hello@drname.com</a>
+          </div>
+        </div>
+
+        <div class="reveal" style="--d:.12s">
+          <form id="appointmentForm" class="form-card" novalidate data-testid="appointment-form">
+            <div class="form-accent" aria-hidden="true"></div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="field sm:col-span-2">
+                <label for="fullName">Full Name <b>*</b></label>
+                <input type="text" id="fullName" name="full_name" placeholder="e.g. Rohan Mehta" autocomplete="name" data-testid="input-full-name" />
+                <span class="field-error" data-error-for="fullName" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number <b>*</b></label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98XXX XXXXX" autocomplete="tel" data-testid="input-phone" />
+                <span class="field-error" data-error-for="phone" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="email">Email Address <b>*</b></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" data-testid="input-email" />
+                <span class="field-error" data-error-for="email" role="alert"></span>
+              </div>
+              <div class="field sm:col-span-2">
+                <label for="service">Preferred Service <b>*</b></label>
+                <select id="service" name="service" data-testid="select-service">
+                  <option value="" selected disabled>Select a service…</option>
+                  <option>Dental Implants</option>
+                  <option>Periodontal Care / Laser Therapy</option>
+                  <option>Preventive Maintenance</option>
+                  <option>Gummy Smile / Esthetic Surgery</option>
+                  <option>Second Opinion / Consultation</option>
+                </select>
+                <span class="field-error" data-error-for="service" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="dateFrom">Preferred Date — From</label>
+                <input type="date" id="dateFrom" name="date_from" data-testid="input-date-from" />
+                <span class="field-error" data-error-for="dateFrom" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="dateTo">Preferred Date — To</label>
+                <input type="date" id="dateTo" name="date_to" data-testid="input-date-to" />
+                <span class="field-error" data-error-for="dateTo" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="timeFrom">Time Window — From</label>
+                <select id="timeFrom" name="time_from" data-testid="select-time-from">
+                  <option value="" selected disabled>From…</option>
+                  <option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option>
+                  <option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option>
+                  <option>05:00 PM</option><option>06:00 PM</option><option>07:00 PM</option>
+                </select>
+                <span class="field-error" data-error-for="timeFrom" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="timeTo">Time Window — To</label>
+                <select id="timeTo" name="time_to" data-testid="select-time-to">
+                  <option value="" selected disabled>To…</option>
+                  <option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option>
+                  <option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option>
+                  <option>06:00 PM</option><option>07:00 PM</option><option>08:00 PM</option>
+                </select>
+                <span class="field-error" data-error-for="timeTo" role="alert"></span>
+              </div>
+
+              <div class="field sm:col-span-2">
+                <label for="message">Message / Inquiry Details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Briefly describe your concern — bleeding gums, missing tooth, implant query…" data-testid="textarea-notes"></textarea>
+                <span class="field-error" data-error-for="message" role="alert"></span>
+              </div>
+            </div>
+
+            <!-- Honeypot (spam trap) — leave empty -->
+            <div class="hp-field" aria-hidden="true">
+              <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+
+            <p class="form-privacy-note" data-testid="form-privacy-note">By submitting, you agree to be contacted about your inquiry. Your details are used only to schedule your appointment.</p>
+
+            <button type="submit" id="submitBtn" class="btn-gold group mt-2 inline-flex w-full items-center justify-center gap-2.5 rounded-2xl bg-teal px-8 py-4 font-head text-[15px] font-medium text-white shadow-soft transition-all duration-300 hover:bg-ink hover:shadow-lift disabled:cursor-not-allowed disabled:opacity-60" data-testid="btn-submit-appointment">
+              <span id="submitLabel">Submit Consultation Request</span>
+              <svg id="submitSpinner" class="hidden h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-opacity="0.25"/><path d="M22 12a10 10 0 00-10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </button>
+            <p id="formStatus" class="mt-4 min-h-[1.25rem] text-center text-sm" role="status" aria-live="polite" data-testid="form-status"></p>
+          </form>
+
+          <!-- success state -->
+          <div id="formSuccess" class="form-success hidden" data-testid="form-success">
+            <span class="success-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L10 17l-5-5"/></svg></span>
+            <h3 class="font-head text-2xl font-semibold text-ink" data-testid="form-success-title">Request received.</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500" data-testid="form-success-copy">Thank you — your consultation request has been recorded. The clinic team will call you back within clinic hours (Mon–Sun, 9 AM – 8 PM) to confirm your slot.</p>
+            <p id="demoNote" class="mt-3 hidden rounded-xl bg-gold-pale px-4 py-3 text-xs leading-relaxed text-ink/80" data-testid="form-demo-note">Demo mode: connect your EmailJS keys in <code>script.js</code> (see <code>EMAILJS-SETUP.md</code>) to deliver submissions to the doctor's inbox.</p>
+            <button id="resetFormBtn" class="mt-6 inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 font-head text-sm font-medium text-ink transition-all duration-300 hover:border-gold hover:text-teal" data-testid="btn-book-another">Book another request</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT & LOCATION ============ -->
+    <section id="contact" class="section-pad relative overflow-hidden bg-ink" data-testid="contact-section">
+      <div class="pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#FFFFFF_1px,transparent_0)] [background-size:30px_30px]"></div>
+        <div class="absolute -top-32 left-1/3 h-[30rem] w-[30rem] rounded-full bg-teal blur-3xl opacity-20"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between reveal">
+          <div>
+            <p class="section-eyebrow !text-gold" data-testid="contact-eyebrow">Contact & Location</p>
+            <h2 class="section-title !text-white" data-testid="contact-title">Open all week, across three prime locations.</h2>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-white/5 px-7 py-5 backdrop-blur" data-testid="contact-hours">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">Operating days</p>
+            <p class="mt-1.5 font-head text-xl font-medium text-white" data-testid="contact-hours-value">Mon – Sun · 9:00 AM – 8:00 PM <span class="block text-xs font-normal tracking-normal text-teal-100/70">By appointment</span></p>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-3" data-testid="contact-locations">
+          <address class="location-card reveal" data-testid="contact-location-1">
+            <p class="loc-city">Thane</p>
+            <p class="loc-addr">Gokhale Road, Naupada,<br/>Thane West</p>
+          </address>
+          <address class="location-card reveal" style="--d:.1s" data-testid="contact-location-2">
+            <p class="loc-city">Mumbai</p>
+            <p class="loc-addr">Linking Road, Bandra West,<br/>Mumbai</p>
+          </address>
+          <address class="location-card reveal" style="--d:.2s" data-testid="contact-location-3">
+            <p class="loc-city">Navi Mumbai</p>
+            <p class="loc-addr">Sector 17, Vashi,<br/>Navi Mumbai</p>
+          </address>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-5 border-t border-white/10 pt-10 sm:flex-row sm:items-center sm:justify-between reveal" data-testid="contact-channels">
+          <a href="tel:+9198XXXXXXX" class="contact-channel group" data-testid="contact-phone">
+            <span class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg></span>
+            <span><span class="block text-[11px] uppercase tracking-[0.2em] text-teal-100/60">Call the clinic</span><span class="font-head text-lg font-medium text-white transition-colors group-hover:text-gold">+91 98XXX XXXXX</span></span>
+          </a>
+          <a href="mailto:hello@drname.com" class="contact-channel group" data-testid="contact-email">
+            <span class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 8l10 6 10-6"/></svg></span>
+            <span><span class="block text-[11px] uppercase tracking-[0.2em] text-teal-100/60">Write to us</span><span class="font-head text-lg font-medium text-white transition-colors group-hover:text-gold">hello@drname.com</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-night pb-10 pt-16 text-teal-100/70" data-testid="footer">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div>
+          <a href="#home" class="flex items-center gap-3" data-testid="footer-logo">
+            <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white/5">
+              <svg width="24" height="24" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 18c-5-5.5-14-5-16.5 3-2 6.5 1.5 10 3 18 .8 4.4 5.8 4.4 6.8 0l2.7-11 2.7 11c1 4.4 6 4.4 6.8 0 1.5-8 5-11.5 3-18-2.5-8-11.5-8.5-16.5-3z" fill="#C5A059"/><path d="M20 14.5C23 9 28 7.5 32 10.5 36 7.5 41 9 44 14.5" stroke="#5EEAD4" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </span>
+            <span class="leading-tight"><span class="block font-head text-[15px] font-semibold text-white">Dr. Aditi Deshmukh</span><span class="block text-[10.5px] font-semibold uppercase tracking-[0.22em] text-gold">Periodontics & Implantology</span></span>
+          </a>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed" data-testid="footer-blurb">Precision periodontal care and permanent implant restoration — delivered with calm, evidence-based dentistry across Thane, Mumbai & Navi Mumbai.</p>
+        </div>
+        <nav aria-label="Footer quick links" data-testid="footer-quick-links">
+          <p class="footer-head">Quick Links</p>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="#home" class="footer-link" data-testid="footer-link-home">Home</a></li>
+            <li><a href="#about" class="footer-link" data-testid="footer-link-about">About the Practice</a></li>
+            <li><a href="#specializations" class="footer-link" data-testid="footer-link-specializations">Specializations</a></li>
+            <li><a href="#cases" class="footer-link" data-testid="footer-link-cases">Case Studies</a></li>
+            <li><a href="#appointment" class="footer-link" data-testid="footer-link-appointment">Book Consultation</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-head">Legal</p>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><button class="footer-link text-left" data-modal-open="privacy" data-testid="footer-link-privacy">Privacy Policy</button></li>
+            <li><button class="footer-link text-left" data-modal-open="disclaimer" data-testid="footer-link-disclaimer">Medical Disclaimer</button></li>
+            <li><a href="#contact" class="footer-link" data-testid="footer-link-contact">Contact & Locations</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-14 rounded-2xl border border-white/10 bg-white/5 p-5 text-[11.5px] leading-relaxed" data-testid="footer-disclaimer-short">
+        <strong class="text-white/80">Medical disclaimer:</strong> the information on this website is for educational purposes only and does not constitute medical or dental advice. An in-person consultation is required for accurate diagnosis and treatment planning.
+      </p>
+
+      <div class="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-7 text-xs sm:flex-row">
+        <p data-testid="footer-copyright">© <span id="year">2025</span> Dr. Aditi Deshmukh, MDS. All rights reserved.</p>
+        <p class="text-teal-100/40" data-testid="footer-credit">Periodontics · Implantology · Thane — Mumbai — Navi Mumbai</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MODALS ============ -->
+  <div class="modal-overlay" id="modal-privacy" data-testid="modal-privacy" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+      <button class="modal-close" data-modal-close aria-label="Close" data-testid="modal-close-privacy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <h3 id="privacyTitle" class="font-head text-2xl font-semibold text-ink">Privacy Policy</h3>
+      <div class="modal-body"><!-- Replace with the practice's final policy text -->
+        <p>We collect only the information you submit through the inquiry form (name, phone, email, preferred service and message). It is used solely to respond to your request and schedule appointments — never sold or shared with third parties, except the email delivery provider that transmits your message to the clinic.</p>
+        <p>Submitting the form constitutes consent to be contacted about your inquiry. You may request correction or deletion of your details at any time by writing to <strong>hello@drname.com</strong>.</p>
+        <p>This website uses no tracking cookies. Standard technical logs are retained briefly for security.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-disclaimer" data-testid="modal-disclaimer" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
+      <button class="modal-close" data-modal-close aria-label="Close" data-testid="modal-close-disclaimer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <h3 id="disclaimerTitle" class="font-head text-2xl font-semibold text-ink">Medical Disclaimer</h3>
+      <div class="modal-body">
+        <p>Information provided on this website is for educational purposes only and does not constitute formal medical or dental advice, diagnosis or a treatment plan.</p>
+        <p>Outcomes described in case studies vary by patient. An in-person consultation with Dr. Aditi Deshmukh is required for accurate diagnostic evaluation and customized treatment planning.</p>
+        <p>In case of dental emergency, call the clinic directly at <strong>+91 98XXX XXXXX</strong> rather than using the online form.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toasts -->
+  <div id="toastRoot" class="fixed bottom-6 right-5 z-[90] flex flex-col gap-3" data-testid="toast-root" aria-live="polite"></div>
+
+  <!-- React preview shell (renders nothing; required by the local dev environment) -->
+  <div id="root"></div>
+
+  <!-- Libraries -->
+  <script defer src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+  <!-- EmailJS Browser SDK v4 -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

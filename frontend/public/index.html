@@ -70,7 +70,7 @@
   <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 transition-all duration-300" data-testid="site-header">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
       <a href="#home" class="group flex items-center" data-testid="nav-logo" aria-label="Dr Richa Sinha — home">
-        <img src="logo.png" alt="Dr Richa Sinha — Gums · Implants · Aesthetics" class="h-16 w-auto object-contain drop-shadow-[0_2px_6px_rgba(15,44,89,0.12)] transition-transform duration-300 group-hover:scale-[1.04] sm:h-20" data-testid="nav-logo-img" />
+        <img src="logo.png" alt="Dr Richa Sinha — Gums · Implants · Aesthetics" class="h-24 w-auto object-contain drop-shadow-[0_2px_6px_rgba(15,44,89,0.12)] transition-transform duration-300 group-hover:scale-[1.04] sm:h-28" data-testid="nav-logo-img" />
       </a>
 
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
@@ -101,7 +101,7 @@
 
   <main>
     <!-- ============ HERO ============ -->
-    <section id="home" class="hero relative overflow-hidden pb-20 pt-32 sm:pt-36 lg:pb-28 lg:pt-40" data-testid="hero-section">
+    <section id="home" class="hero relative overflow-hidden pb-20 pt-36 sm:pt-40 lg:pb-28 lg:pt-44" data-testid="hero-section">
       <!-- ambient background -->
       <div class="pointer-events-none absolute inset-0" aria-hidden="true">
         <div class="absolute -top-40 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-teal-50 blur-3xl"></div>
@@ -123,19 +123,17 @@
       <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
         <!-- copy -->
         <div class="max-w-3xl">
-          <p class="hero-fade inline-flex items-center gap-3 rounded-2xl border border-teal-100 bg-white/70 px-5 py-3 backdrop-blur" data-testid="hero-eyebrow" style="--d:.05s">
-            <span class="h-2 w-2 flex-none rounded-full bg-gold"></span>
-            <span class="text-left leading-tight">
-              <span class="block font-head text-[15px] font-bold uppercase tracking-[0.14em] text-ink">Dr Richa Sinha</span>
-              <span class="mt-1 block text-[10.5px] font-semibold uppercase tracking-[0.22em] text-teal">Periodontist & Implantologist</span>
-            </span>
+          <p class="hero-fade inline-flex items-center gap-2.5 rounded-full border border-teal-100 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal backdrop-blur" data-testid="hero-eyebrow" style="--d:.05s">
+            <span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
+            Periodontist & Implantologist
           </p>
 
-          <h1 class="mt-7 font-display text-[2.6rem] font-semibold leading-[1.06] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[4rem]" data-testid="hero-headline">
-            <span class="line-mask"><span class="line-inner" style="--d:.15s">Restoring natural smiles</span></span>
-            <span class="line-mask"><span class="line-inner" style="--d:.28s">with <em class="font-display italic text-teal">meticulous</em></span></span>
-            <span class="line-mask"><span class="line-inner" style="--d:.41s">precision.</span></span>
+          <h1 class="mt-8 font-display text-[3.6rem] font-semibold leading-[1.04] tracking-tight text-ink sm:text-[4.5rem] lg:text-[6rem]" data-testid="hero-headline">
+            <span class="line-mask"><span class="line-inner" style="--d:.15s">Dr Richa Sinha</span></span>
           </h1>
+          <p class="mt-4 font-display text-2xl font-medium italic leading-snug text-slate-700 sm:text-3xl lg:text-[2rem]" data-testid="hero-tagline">
+            <span class="line-mask"><span class="line-inner" style="--d:.3s">Restoring natural smiles with <em class="text-teal">meticulous</em> precision.</span></span>
+          </p>
 
           <p class="hero-fade mt-7 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="hero-subheadline" style="--d:.55s">
             Advanced periodontal therapy, laser therapy, micro-surgery, root coverage procedures and dental implants —
@@ -154,7 +152,7 @@
 
           <!-- trust badges -->
           <ul class="hero-fade mt-12 grid max-w-xl grid-cols-2 gap-x-6 gap-y-4 border-t border-slate-200/80 pt-8 sm:grid-cols-3" data-testid="hero-trust-badges" style="--d:.8s">
-            <li class="trust-badge" data-testid="hero-trust-badge-1"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>6+ Months Experience</li>
+            <li class="trust-badge" data-testid="hero-trust-badge-1"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.7 2.7 3.2 6 3.2s6-1.5 6-3.2v-4.5"/><path d="M22 9v5"/></svg>MDS — Periodontology & Implantology</li>
             <li class="trust-badge" data-testid="hero-trust-badge-2"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l-9 9-5-5"/></svg>25+ Dental Implants</li>
             <li class="trust-badge" data-testid="hero-trust-badge-3"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 10h-6.5z"/></svg>Laser Minimally Invasive Care</li>
           </ul>
@@ -233,13 +231,6 @@
         </div>
       </div>
 
-      <!-- stat band -->
-      <div class="mx-auto mt-20 max-w-7xl px-5 sm:px-8">
-        <div class="grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-200/80 shadow-soft" data-testid="about-stats"><!-- NOTE: figures are editable placeholders -->
-          <div class="stat-cell reveal" data-testid="stat-cell-years"><span class="stat-num" data-count="6" data-suffix="+">6+</span><span class="stat-label">Months of experience</span></div>
-          <div class="stat-cell reveal" style="--d:.08s" data-testid="stat-cell-implants"><span class="stat-num" data-count="25" data-suffix="+">25+</span><span class="stat-label">Dental implants</span></div>
-        </div>
-      </div>
     </section>
 
     <!-- ============ SPECIALIZATIONS ============ -->

@@ -82,3 +82,15 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 ## Revision v8 (2026-09-29, user-requested)
 - Hero badge restructured: "Dr Richa Sinha" (15px bold) on line one, "Periodontist & Implantologist" (10.5px) on line two
 - Verified desktop + mobile: correct two-line hierarchy, no overflow
+
+
+## Revision v9 (2026-09-29, user-requested)
+- Hero H1 is now the doctor's name in display serif (83px desktop); "Restoring natural smiles with meticulous precision." moved to an italic tagline below
+- Header logo two sizes up: 96px mobile / 112px desktop; nav menu font 14.5px -> 16.5px; scroll offsets adjusted for taller header
+- Trust badge 1: "6+ Months Experience" -> "MDS — Periodontology & Implantology" (graduation-cap icon); About stats band (6+/25+) removed entirely
+- Verified desktop + mobile: no "6+" remains, no stats band, no overflow, anchor offsets correct, no console errors
+
+
+## Revision v10 (2026-09-29, user-requested)
+- Removed the duplicate doctor-name text: hero badge now shows only "Periodontist & Implantologist"; the name appears exactly once in the hero as the display heading, enlarged to 96px desktop / 3.6rem mobile
+- Verified desktop + mobile: single name instance in hero, 96px H1, no overflow, no console errors

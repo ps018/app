@@ -14,7 +14,7 @@
 html { scroll-behavior: smooth; }
 body { overflow-x: hidden; }
 
-section[id] { scroll-margin-top: 112px; }
+section[id] { scroll-margin-top: 152px; }
 
 ::selection { background: var(--gold); color: var(--ink); }
 
@@ -38,7 +38,7 @@ section[id] { scroll-margin-top: 112px; }
 #siteHeader.is-scrolled .h-11 { box-shadow: 0 6px 16px -6px rgba(15, 44, 89, 0.35); }
 
 .nav-link {
-  position: relative; font-family: Outfit, sans-serif; font-size: 14.5px; font-weight: 500;
+  position: relative; font-family: Outfit, sans-serif; font-size: 16.5px; font-weight: 550;
   color: rgba(15, 44, 89, 0.75); transition: color .25s var(--ease-out);
 }
 .nav-link::after {

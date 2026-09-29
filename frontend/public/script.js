@@ -82,7 +82,7 @@ async function sendWithBackend(formData) {
   function scrollToTarget(hash) {
     const target = document.querySelector(hash);
     if (!target) return;
-    if (lenis) lenis.scrollTo(target, { offset: -104, duration: 1.2 });
+    if (lenis) lenis.scrollTo(target, { offset: -142, duration: 1.2 });
     else target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
   }
 

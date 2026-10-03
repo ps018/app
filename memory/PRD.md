@@ -103,3 +103,9 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 - Hardening: images marked draggable=false + dragstart prevented in the slider (native image drag could cancel pointer drags)
 - Originals preserved in /app/assets-src; deploy folder contains only optimized web images (52-162KB each)
 - Verified: slider drag 50->28, tab switch, lazy loading, mobile layout, no overflow, no console errors
+
+
+## Revision v12 (2026-10-03, user-requested correction)
+- Watermark strategy reversed per user: the 2 reference photos (before-1/after-1) keep their ORIGINAL cursive watermark byte-for-byte (no re-encode); the 2 scaling photos got a replicated watermark matching it (Italianno script, white ~43% opacity, no shadow, centered horizontally at 44.8% height, size 7.9% of image width = same ratio as originals)
+- My earlier serif top-center watermark and the inpainting pass were discarded
+- Verified on site: drag works, both tabs, watermark reads consistently across all 4 photos in the slider, desktop + mobile polished, no console errors

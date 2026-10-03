@@ -109,3 +109,8 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 - Watermark strategy reversed per user: the 2 reference photos (before-1/after-1) keep their ORIGINAL cursive watermark byte-for-byte (no re-encode); the 2 scaling photos got a replicated watermark matching it (Italianno script, white ~43% opacity, no shadow, centered horizontally at 44.8% height, size 7.9% of image width = same ratio as originals)
 - My earlier serif top-center watermark and the inpainting pass were discarded
 - Verified on site: drag works, both tabs, watermark reads consistently across all 4 photos in the slider, desktop + mobile polished, no console errors
+
+
+## Revision v13 (2026-10-03, user-requested correction)
+- Final watermark direction: the replicated watermark on the scaling pair is the source of truth. Old cursive watermark fully removed from the depigmentation pair (OpenCV inpaint, zoom-verified artifact-free), then the master watermark applied to them (Italianno, 7.9% of width, center-x at 44.8% height, white) at slightly lower opacity (alpha 85 vs 110) per request
+- Scaling pair files untouched. All 4 verified side-by-side via contact sheet + live slider screenshots (watermark continuous across the before/after divide)

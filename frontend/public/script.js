@@ -403,8 +403,8 @@ async function sendWithBackend(formData) {
         form.reset();
       } catch (err) {
         console.error("[EmailJS] submission failed:", err);
-        formStatus.innerHTML = '<span class="text-[#C74B3D]">We couldn\'t send your inquiry. Please try again, or call +91 9980901103.</span>';
-        showToast("Sending failed — please retry or call +91 9980901103.", "error");
+        formStatus.innerHTML = '<span class="text-[#C74B3D]">We couldn\'t send your inquiry. Please try again, or call +91 80975 51887.</span>';
+        showToast("Sending failed — please retry or call +91 80975 51887.", "error");
       } finally {
         submitting = false;
         setSending(false);

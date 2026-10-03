@@ -114,3 +114,8 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 ## Revision v13 (2026-10-03, user-requested correction)
 - Final watermark direction: the replicated watermark on the scaling pair is the source of truth. Old cursive watermark fully removed from the depigmentation pair (OpenCV inpaint, zoom-verified artifact-free), then the master watermark applied to them (Italianno, 7.9% of width, center-x at 44.8% height, white) at slightly lower opacity (alpha 85 vs 110) per request
 - Scaling pair files untouched. All 4 verified side-by-side via contact sheet + live slider screenshots (watermark continuous across the before/after divide)
+
+
+## Revision v14 (2026-10-03, user-requested)
+- Doctor phone number changed everywhere: +91 80975 51887 (contact section display + tel link, WhatsApp float wa.me/918097551887, disclaimer modal, form error strings, handoff docs). The 9999999999 form placeholder stays as the user-requested dummy example
+- Verified on site: contact section, tel: and wa.me links all resolve to the new number

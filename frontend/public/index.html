@@ -184,18 +184,10 @@
         <div class="reveal mx-auto w-full max-w-md lg:max-w-none" data-testid="about-photo-slider">
           <div class="doc-slider" role="region" aria-roledescription="carousel" aria-label="Photos of Dr Richa Sinha">
             <div class="doc-slider-track" id="docSliderTrack">
-              <!-- TO ADD MORE PHOTOS: copy this whole <figure> block and replace the placeholder with
-                   <img src="your-photo.jpg" alt="Dr Richa Sinha" /> (put the file next to index.html) -->
+              <!-- TO ADD MORE PHOTOS: copy this whole <figure> block and change the src/alt
+                   (put the image file next to index.html) -->
               <figure class="doc-slide" data-testid="about-slide-1">
-                <!-- TODO: replace this placeholder with a real portrait of Dr Richa Sinha -->
-                <div class="doc-placeholder">
-                  <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true">
-                    <circle cx="60" cy="42" r="20"/>
-                    <path d="M24 100c7-24 20-32 36-32s29 8 36 32"/>
-                  </svg>
-                  <p class="doc-placeholder-name">Dr Richa Sinha</p>
-                  <p class="doc-placeholder-note">Portrait coming soon</p>
-                </div>
+                <img src="dr.jpg" alt="Dr Richa Sinha — Periodontist & Implantologist" />
               </figure>
             </div>
             <button type="button" class="doc-nav doc-prev" data-testid="slider-prev" aria-label="Previous photo">
@@ -300,224 +292,58 @@
         <div class="mx-auto max-w-2xl text-center reveal">
           <p class="section-eyebrow justify-center" data-testid="cases-eyebrow">Clinical Case Studies</p>
           <h2 class="section-title" data-testid="cases-title">See the difference. Drag the line.</h2>
-          <p class="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="cases-sub">Illustrative clinical diagrams — slide left to right to compare before and after results. Real patient photographs are shared during consultation, with consent.</p>
+          <p class="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg" data-testid="cases-sub">Real patient outcomes — drag the divider to compare before and after results. Photographs published with patient consent.</p>
         </div>
 
         <!-- case tabs -->
         <div class="mt-10 flex flex-wrap justify-center gap-3 reveal" data-testid="ba-tabs" role="tablist" aria-label="Select a case">
-          <button class="ba-tab is-active" data-case="0" role="tab" aria-selected="true" data-testid="ba-tab-1">Full-Arch Restoration</button>
-          <button class="ba-tab" data-case="1" role="tab" aria-selected="false" data-testid="ba-tab-2">Single Implant</button>
-          <button class="ba-tab" data-case="2" role="tab" aria-selected="false" data-testid="ba-tab-3">Gummy Smile</button>
+          <button class="ba-tab is-active" data-case="0" role="tab" aria-selected="true" data-testid="ba-tab-1">Gingival Depigmentation</button>
+          <button class="ba-tab" data-case="1" role="tab" aria-selected="false" data-testid="ba-tab-2">Scaling & Root Planing</button>
         </div>
 
-        <!-- Case 0 : Full-arch -->
+        <!-- Case 0 : Gingival depigmentation -->
         <div class="ba-wrap reveal" style="--d:.1s" data-testid="ba-case-0">
-          <div class="ba-slider" id="baSlider0" data-testid="ba-slider-0" role="group" aria-label="Before and after comparison — full-arch restoration">
+          <div class="ba-slider" id="baSlider0" data-testid="ba-slider-0" role="group" aria-label="Before and after comparison — gingival depigmentation" style="--ba-ar: 916 / 619">
             <div class="ba-layer">
-              <!-- BEFORE diagram -->
-              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="Before: failing upper dentition" role="img">
-                <defs>
-                  <linearGradient id="bgB0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
-                </defs>
-                <rect width="800" height="560" fill="url(#bgB0)"/>
-                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
-                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
-                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 1A — PRE-OP</text>
-                <!-- inflamed gum band -->
-                <rect x="70" y="112" width="660" height="102" rx="44" fill="#E08A80"/>
-                <rect x="70" y="112" width="660" height="26" rx="13" fill="#D67A70" opacity="0.6"/>
-                <!-- teeth (compromised) -->
-                <g>
-                  <rect x="101" y="168" width="58" height="128" rx="18" fill="#C9CFCA" stroke="#B7BFBA" stroke-width="2"/>
-                  <rect x="169" y="168" width="52" height="140" rx="16" fill="#C2C9C4" stroke="#B0B8B3" stroke-width="2" transform="rotate(4 195 238)"/>
-                  <rect x="231" y="168" width="50" height="150" rx="16" fill="#CBCFCA" stroke="#B7BFBA" stroke-width="2"/>
-                  <!-- missing tooth gap at 291 -->
-                  <rect x="349" y="168" width="46" height="104" rx="14" fill="#BEC5C0" stroke="#ACB4AF" stroke-width="2"/>
-                  <rect x="405" y="168" width="46" height="160" rx="14" fill="#C9CFCA" stroke="#B7BFBA" stroke-width="2" transform="rotate(-3 428 248)"/>
-                  <rect x="461" y="168" width="48" height="120" rx="15" fill="#C2C8C3" stroke="#B0B8B3" stroke-width="2"/>
-                  <rect x="519" y="168" width="50" height="150" rx="16" fill="#CBCFC9" stroke="#B7BFBA" stroke-width="2"/>
-                  <rect x="579" y="168" width="52" height="140" rx="16" fill="#C6CCC7" stroke="#B0B8B3" stroke-width="2" transform="rotate(-4 605 238)"/>
-                  <rect x="641" y="168" width="58" height="128" rx="18" fill="#C9CFCA" stroke="#B7BFBA" stroke-width="2"/>
-                </g>
-                <!-- swollen papillae -->
-                <g fill="#D67A70">
-                  <path d="M156 206q10 44 20 0z"/><path d="M218 206q10 44 20 0z"/><path d="M278 206q10 44 20 0z"/><path d="M336 206q10 44 20 0z"/><path d="M392 206q10 44 20 0z"/><path d="M448 206q10 44 20 0z"/><path d="M506 206q10 44 20 0z"/><path d="M566 206q10 44 20 0z"/><path d="M628 206q10 44 20 0z"/>
-                </g>
-                <!-- annotation -->
-                <g fill="none" stroke="#C5A059" stroke-width="2">
-                  <path d="M270 356h100" stroke-dasharray="4 6"/>
-                </g>
-                <text x="270" y="386" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F2C59" fill-opacity="0.55">MISSING · WORN · DISCOLORED</text>
-              </svg>
+              <img src="case-depigmentation-before.jpg" alt="Before gingival depigmentation — pigmented gum tissue" loading="lazy" decoding="async" draggable="false" />
               <span class="ba-label ba-label-before" data-testid="ba-label-before">Before</span>
             </div>
             <div class="ba-layer ba-after">
-              <!-- AFTER diagram -->
-              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="After: full-arch implant restoration" role="img">
-                <defs>
-                  <linearGradient id="bgA0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
-                  <linearGradient id="toothA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0F4F2"/></linearGradient>
-                </defs>
-                <rect width="800" height="560" fill="url(#bgA0)"/>
-                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
-                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
-                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 1B — POST-OP</text>
-                <!-- healthy gum band -->
-                <rect x="70" y="128" width="660" height="86" rx="40" fill="#F2C4BD"/>
-                <!-- uniform restored arch -->
-                <g fill="url(#toothA)" stroke="#D9E0DD" stroke-width="2">
-                  <rect x="101" y="176" width="58" height="132" rx="18"/>
-                  <rect x="169" y="176" width="52" height="144" rx="16"/>
-                  <rect x="231" y="176" width="50" height="154" rx="16"/>
-                  <rect x="291" y="176" width="48" height="160" rx="15"/>
-                  <rect x="349" y="176" width="46" height="164" rx="14"/>
-                  <rect x="405" y="176" width="46" height="164" rx="14"/>
-                  <rect x="461" y="176" width="48" height="160" rx="15"/>
-                  <rect x="519" y="176" width="50" height="154" rx="16"/>
-                  <rect x="579" y="176" width="52" height="144" rx="16"/>
-                  <rect x="641" y="176" width="58" height="132" rx="18"/>
-                </g>
-                <g fill="#F2C4BD">
-                  <path d="M156 214q10 40 20 0z"/><path d="M218 214q10 40 20 0z"/><path d="M278 214q10 40 20 0z"/><path d="M336 214q10 40 20 0z"/><path d="M392 214q10 40 20 0z"/><path d="M448 214q10 40 20 0z"/><path d="M506 214q10 40 20 0z"/><path d="M566 214q10 40 20 0z"/><path d="M628 214q10 40 20 0z"/>
-                </g>
-                <text x="262" y="420" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F766E">FIXED FULL-CERAMIC PROSTHESIS · 12 UNITS</text>
-              </svg>
+              <img src="case-depigmentation-after.jpg" alt="After gingival depigmentation — even natural pink gum tone" loading="lazy" decoding="async" draggable="false" />
               <span class="ba-label ba-label-after" data-testid="ba-label-after">After</span>
             </div>
             <div class="ba-handle" data-testid="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider — drag or use arrow keys" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
               <span class="ba-grip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
             </div>
             <div class="ba-note" data-testid="ba-note-0">
-              <p class="font-head text-sm font-semibold text-white sm:text-base">Full-Arch Implant Restoration</p>
-              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">6-month post-op result following guided bone regeneration and fixed ceramic prosthesis placement.</p>
+              <p class="font-head text-sm font-semibold text-white sm:text-base">Gingival Depigmentation</p>
+              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">Laser-assisted gum depigmentation — a natural, even pink gum tone restored with minimal discomfort.</p>
             </div>
           </div>
         </div>
 
-        <!-- Case 1 : Single implant (hidden initially) -->
+        <!-- Case 1 : Scaling & root planing -->
         <div class="ba-wrap hidden" data-testid="ba-case-1">
-          <div class="ba-slider" id="baSlider1" data-testid="ba-slider-1" role="group" aria-label="Before and after comparison — single implant">
+          <div class="ba-slider" id="baSlider1" data-testid="ba-slider-1" role="group" aria-label="Before and after comparison — scaling and root planing" style="--ba-ar: 2000 / 1041">
             <div class="ba-layer">
-              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="Before: missing lower molar" role="img">
-                <defs><linearGradient id="bgB1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient></defs>
-                <rect width="800" height="560" fill="url(#bgB1)"/>
-                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
-                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
-                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 2A — PRE-OP</text>
-                <rect x="70" y="118" width="660" height="94" rx="42" fill="#F2C4BD"/>
-                <g fill="#FBFCFB" stroke="#D9E0DD" stroke-width="2">
-                  <rect x="101" y="172" width="58" height="130" rx="18"/><rect x="169" y="172" width="52" height="142" rx="16"/>
-                  <rect x="231" y="172" width="50" height="152" rx="16"/><rect x="291" y="172" width="48" height="158" rx="15"/>
-                  <rect x="349" y="172" width="46" height="162" rx="14"/><rect x="405" y="172" width="46" height="162" rx="14"/>
-                  <rect x="461" y="172" width="48" height="158" rx="15"/><rect x="519" y="172" width="50" height="152" rx="16"/>
-                  <!-- gap here (579) --><rect x="641" y="172" width="58" height="130" rx="18"/>
-                </g>
-                <g fill="#F2C4BD"><path d="M156 218q10 38 20 0z"/><path d="M218 218q10 38 20 0z"/><path d="M278 218q10 38 20 0z"/><path d="M336 218q10 38 20 0z"/><path d="M392 218q10 38 20 0z"/><path d="M448 218q10 38 20 0z"/><path d="M506 218q10 38 20 0z"/><path d="M628 218q10 38 20 0z"/></g>
-                <!-- gap annotation -->
-                <circle cx="605" cy="255" r="58" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="5 6"/>
-                <text x="475" y="382" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F2C59" fill-opacity="0.55">MISSING MOLAR · #46 REGION</text>
-              </svg>
+              <img src="case-scaling-before.jpg" alt="Before scaling and root planing — inflamed gum tissue" loading="lazy" decoding="async" draggable="false" />
               <span class="ba-label ba-label-before">Before</span>
             </div>
             <div class="ba-layer ba-after">
-              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="After: implant and zirconia crown" role="img">
-                <defs>
-                  <linearGradient id="bgA1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
-                  <linearGradient id="toothA1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0F4F2"/></linearGradient>
-                </defs>
-                <rect width="800" height="560" fill="url(#bgA1)"/>
-                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
-                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
-                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 2B — POST-OP</text>
-                <rect x="70" y="118" width="660" height="94" rx="42" fill="#F2C4BD"/>
-                <g fill="url(#toothA1)" stroke="#D9E0DD" stroke-width="2">
-                  <rect x="101" y="172" width="58" height="130" rx="18"/><rect x="169" y="172" width="52" height="142" rx="16"/>
-                  <rect x="231" y="172" width="50" height="152" rx="16"/><rect x="291" y="172" width="48" height="158" rx="15"/>
-                  <rect x="349" y="172" width="46" height="162" rx="14"/><rect x="405" y="172" width="46" height="162" rx="14"/>
-                  <rect x="461" y="172" width="48" height="158" rx="15"/><rect x="519" y="172" width="50" height="152" rx="16"/>
-                  <rect x="579" y="172" width="52" height="146" rx="16" fill="#FFFFFF" stroke="#C5A059" stroke-width="2.5"/>
-                  <rect x="641" y="172" width="58" height="130" rx="18"/>
-                </g>
-                <g fill="#F2C4BD"><path d="M156 218q10 38 20 0z"/><path d="M218 218q10 38 20 0z"/><path d="M278 218q10 38 20 0z"/><path d="M336 218q10 38 20 0z"/><path d="M392 218q10 38 20 0z"/><path d="M448 218q10 38 20 0z"/><path d="M506 218q10 38 20 0z"/><path d="M566 218q10 38 20 0z"/><path d="M628 218q10 38 20 0z"/></g>
-                <circle cx="605" cy="255" r="58" fill="none" stroke="#C5A059" stroke-width="2.5"/>
-                <path d="M605 318v34" stroke="#C5A059" stroke-width="2"/>
-                <text x="470" y="382" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F766E">IMPLANT + ZIRCONIA CROWN</text>
-              </svg>
+              <img src="case-scaling-after.jpg" alt="After scaling and root planing — healthy gum contour" loading="lazy" decoding="async" draggable="false" />
               <span class="ba-label ba-label-after">After</span>
             </div>
             <div class="ba-handle" data-testid="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider — drag or use arrow keys" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
               <span class="ba-grip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
             </div>
             <div class="ba-note" data-testid="ba-note-1">
-              <p class="font-head text-sm font-semibold text-white sm:text-base">Single-Tooth Implant & Crown</p>
-              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">Delayed immediate implant with zirconia crown — 3-month osseointegration, no adjacent teeth touched.</p>
+              <p class="font-head text-sm font-semibold text-white sm:text-base">Scaling & Root Planing</p>
+              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">Deep cleaning below the gum line — inflammation resolved and a healthy gum contour restored.</p>
             </div>
           </div>
         </div>
 
-        <!-- Case 2 : Gummy smile (hidden initially) -->
-        <div class="ba-wrap hidden" data-testid="ba-case-2">
-          <div class="ba-slider" id="baSlider2" data-testid="ba-slider-2" role="group" aria-label="Before and after comparison — gummy smile correction">
-            <div class="ba-layer">
-              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="Before: excessive gum display" role="img">
-                <defs><linearGradient id="bgB2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient></defs>
-                <rect width="800" height="560" fill="url(#bgB2)"/>
-                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
-                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
-                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 3A — PRE-OP</text>
-                <!-- tall gum band (gummy) -->
-                <rect x="70" y="86" width="660" height="150" rx="48" fill="#F2C4BD"/>
-                <!-- short teeth -->
-                <g fill="#FBFCFB" stroke="#D9E0DD" stroke-width="2">
-                  <rect x="101" y="216" width="58" height="88" rx="18"/><rect x="169" y="216" width="52" height="98" rx="16"/>
-                  <rect x="231" y="216" width="50" height="104" rx="16"/><rect x="291" y="216" width="48" height="108" rx="15"/>
-                  <rect x="349" y="216" width="46" height="112" rx="14"/><rect x="405" y="216" width="46" height="112" rx="14"/>
-                  <rect x="461" y="216" width="48" height="108" rx="15"/><rect x="519" y="216" width="50" height="104" rx="16"/>
-                  <rect x="579" y="216" width="52" height="98" rx="16"/><rect x="641" y="216" width="58" height="88" rx="18"/>
-                </g>
-                <g fill="#F2C4BD"><path d="M156 258q10 34 20 0z"/><path d="M218 258q10 34 20 0z"/><path d="M278 258q10 34 20 0z"/><path d="M336 258q10 34 20 0z"/><path d="M392 258q10 34 20 0z"/><path d="M448 258q10 34 20 0z"/><path d="M506 258q10 34 20 0z"/><path d="M566 258q10 34 20 0z"/><path d="M628 258q10 34 20 0z"/></g>
-                <text x="238" y="418" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F2C59" fill-opacity="0.55">EXCESSIVE GINGIVAL DISPLAY</text>
-              </svg>
-              <span class="ba-label ba-label-before">Before</span>
-            </div>
-            <div class="ba-layer ba-after">
-              <svg viewBox="0 0 800 560" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-label="After: balanced gum contour" role="img">
-                <defs>
-                  <linearGradient id="bgA2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDF2F1"/><stop offset="1" stop-color="#E2EAE8"/></linearGradient>
-                  <linearGradient id="toothA2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0F4F2"/></linearGradient>
-                </defs>
-                <rect width="800" height="560" fill="url(#bgA2)"/>
-                <g stroke="#0F2C59" stroke-opacity="0.05"><path d="M0 140h800M0 280h800M0 420h800M200 0v560M400 0v560M600 0v560"/></g>
-                <path d="M24 24h26M24 24v26M776 24h-26M776 24v26M24 536h26M24 536v-26M776 536h-26M776 536v-26" stroke="#0F2C59" stroke-opacity="0.25" stroke-width="2"/>
-                <text x="30" y="552" font-family="Outfit, sans-serif" font-size="13" letter-spacing="3" fill="#0F2C59" fill-opacity="0.4">FIG. 3B — POST-OP</text>
-                <!-- reduced gum band -->
-                <rect x="70" y="130" width="660" height="88" rx="40" fill="#F2C4BD"/>
-                <!-- longer teeth -->
-                <g fill="url(#toothA2)" stroke="#D9E0DD" stroke-width="2">
-                  <rect x="101" y="196" width="58" height="126" rx="18"/><rect x="169" y="196" width="52" height="138" rx="16"/>
-                  <rect x="231" y="196" width="50" height="148" rx="16"/><rect x="291" y="196" width="48" height="154" rx="15"/>
-                  <rect x="349" y="196" width="46" height="158" rx="14"/><rect x="405" y="196" width="46" height="158" rx="14"/>
-                  <rect x="461" y="196" width="48" height="154" rx="15"/><rect x="519" y="196" width="50" height="148" rx="16"/>
-                  <rect x="579" y="196" width="52" height="138" rx="16"/><rect x="641" y="196" width="58" height="126" rx="18"/>
-                </g>
-                <g fill="#F2C4BD"><path d="M156 240q10 38 20 0z"/><path d="M218 240q10 38 20 0z"/><path d="M278 240q10 38 20 0z"/><path d="M336 240q10 38 20 0z"/><path d="M392 240q10 38 20 0z"/><path d="M448 240q10 38 20 0z"/><path d="M506 240q10 38 20 0z"/><path d="M566 240q10 38 20 0z"/><path d="M628 240q10 38 20 0z"/></g>
-                <!-- old gum line reference -->
-                <path d="M70 236h660" stroke="#C5A059" stroke-width="2" stroke-dasharray="6 7"/>
-                <text x="240" y="418" font-family="Outfit, sans-serif" font-size="15" letter-spacing="2" fill="#0F766E">GUM LINE RECONTOURED — LASER</text>
-              </svg>
-              <span class="ba-label ba-label-after">After</span>
-            </div>
-            <div class="ba-handle" data-testid="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider — drag or use arrow keys" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-              <span class="ba-grip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
-            </div>
-            <div class="ba-note" data-testid="ba-note-2">
-              <p class="font-head text-sm font-semibold text-white sm:text-base">Esthetic Crown Lengthening — Gummy Smile</p>
-              <p class="mt-1 text-xs leading-relaxed text-teal-100/85 sm:text-[13px]">Laser gingival contouring for a proportionate smile line; 48-hour rapid tissue recovery.</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="mt-8 text-center text-xs leading-relaxed text-slate-400" data-testid="ba-disclaimer">Illustrative diagrams for demonstration. Clinical photography is shared during in-person consultation.</p>
+        <p class="mt-8 text-center text-xs leading-relaxed text-slate-400" data-testid="ba-disclaimer">Actual patient photographs shared with consent. Individual results may vary.</p>
       </div>
     </section>
 

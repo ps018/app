@@ -94,3 +94,12 @@ All of the above, verified in preview (desktop 1440 + mobile 390, zero console e
 ## Revision v10 (2026-09-29, user-requested)
 - Removed the duplicate doctor-name text: hero badge now shows only "Periodontist & Implantologist"; the name appears exactly once in the hero as the display heading, enlarged to 96px desktop / 3.6rem mobile
 - Verified desktop + mobile: single name instance in hero, 96px H1, no overflow, no console errors
+
+
+## Revision v11 (2026-10-03, user-requested)
+- Real portrait of Dr Richa Sinha (dr.jpg, optimized 1000px) replaces the About slider placeholder; more photos can be added as extra slides
+- Cases section rebuilt around 2 real consented cases: Gingival Depigmentation (before-1/after-1) and Scaling & Root Planing (before-2/after-2); SVG diagrams removed
+- Old printed watermark removed from the 2 affected photos (OpenCV inpaint), new uniform watermark baked into all 4: Cormorant Garamond 600, size 3.8% of image width, 6% tracking, white 80% + ink shadow, top-center with 4.5% top margin (never cropped by the slider, never under UI overlays)
+- Hardening: images marked draggable=false + dragstart prevented in the slider (native image drag could cancel pointer drags)
+- Originals preserved in /app/assets-src; deploy folder contains only optimized web images (52-162KB each)
+- Verified: slider drag 50->28, tab switch, lazy loading, mobile layout, no overflow, no console errors

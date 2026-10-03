@@ -224,6 +224,7 @@ async function sendWithBackend(formData) {
     };
 
     let dragging = false;
+    slider.addEventListener("dragstart", (e) => e.preventDefault()); // native image drag would cancel the pointer drag
     slider.addEventListener("pointerdown", (e) => {
       dragging = true;
       slider.setPointerCapture(e.pointerId);

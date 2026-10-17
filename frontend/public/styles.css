@@ -211,7 +211,7 @@ section[id] { scroll-margin-top: 152px; }
 .ba-label-after { right: 1.1rem; background: rgba(13, 148, 136, 0.85); color: #fff; }
 
 .ba-mobile-labels {
-  display: none; align-items: center; justify-content: space-between; gap: 1rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   padding: .95rem .4rem 0;
 }
 .ba-mobile-label {
@@ -223,7 +223,7 @@ section[id] { scroll-margin-top: 152px; }
 .ba-mobile-label-after { background: rgba(13, 148, 136, 0.12); color: #0D9488; }
 
 .ba-mobile-note {
-  display: none; margin-top: 1rem;
+  display: block; margin-top: .55rem;
   border-radius: 1rem; padding: .95rem 1rem;
   background: rgba(255, 255, 255, 0.84);
   border: 1px solid rgba(15, 44, 89, 0.08);
@@ -257,14 +257,17 @@ section[id] { scroll-margin-top: 152px; }
   background: rgba(11, 31, 63, 0.78); backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
+
+/* Keep all comparison labels and case notes below the image on every screen size. */
+.ba-label,
+.ba-note {
+  display: none;
+}
 @media (max-width: 640px) {
   .ba-note p:first-child { font-size: 12.5px; }
   .ba-note p:last-child { font-size: 11px; }
   .ba-slider { aspect-ratio: 4 / 3; }
-  .ba-label { display: none; }
-  .ba-note { display: none; }
-  .ba-mobile-note { display: block; }
-  .ba-mobile-labels { display: flex; }
+  .ba-mobile-note { margin-top: .5rem; }
 }
 
 .ba-wrap { opacity: 1; transition: opacity .35s var(--ease-out); }
